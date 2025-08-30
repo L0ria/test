@@ -1,52 +1,48 @@
-# Prophetic Vision Ethics Review Checklist
+# Ethical Review Checklist for Prophetic Leadership Scenarios
 
-This checklist must be completed before any prophetic vision is shared publicly or implemented.
+## 1. Vision Statement
+- [ ] Is the vision articulated as a hypothesis, not a decree?
+- [ ] Does it avoid absolute language (e.g., 'must', 'forever', 'only')?
+- [ ] Is the scope clearly defined and bounded?
 
-## Section 1: Vision Clarity
+## 2. Risk Assessment
+- [ ] Has the potential for harm been identified (physical, psychological, societal)?
+- [ ] Are there clear exit criteria if harm is detected?
+- [ ] Have unintended consequences been modeled?
 
-- [ ] The vision is stated as a hypothesis, not a decree.
-- [ ] The language is clear and avoids absolute terms (e.g., "must", "only", "always").
-- [ ] The vision is scoped to a specific domain (e.g., energy, education, AI governance).
-- [ ] The intended impact is explicitly defined.
+## 3. Transparency & Auditability
+- [ ] Is all data and decision logic publicly accessible?
+- [ ] Are version histories maintained with clear change descriptions?
+- [ ] Can the process be audited by third parties?
 
-## Section 2: Risk & Harm Assessment
+## 4. Public Participation
+- [ ] Has feedback been solicited from diverse stakeholders?
+- [ ] Are consultation methods accessible to all (multilingual, low-bandwidth options)?
+- [ ] Are responses to feedback documented and addressed?
 
-- [ ] All potential negative outcomes have been identified.
-- [ ] A risk matrix has been created (likelihood vs. impact).
-- [ ] The most severe risks are documented with mitigation strategies.
-- [ ] The vision will not be implemented if risk score exceeds 0.8.
+## 5. Consent & Autonomy
+- [ ] Are all participants able to opt-in or opt-out freely?
+- [ ] Is there a clear mechanism for withdrawal?
+- [ ] Are vulnerable populations protected?
 
-## Section 3: Public Participation
+## 6. Environmental & Long-term Impact
+- [ ] Has the ecological footprint been assessed?
+- [ ] Are long-term consequences (50+ years) considered?
+- [ ] Are intergenerational equity principles applied?
 
-- [ ] The vision has been shared with at least three diverse stakeholder groups.
-- [ ] Feedback mechanisms are in place (surveys, forums, translation support).
-- [ ] Public feedback has been collected and analyzed.
-- [ ] The feedback summary is publicly available.
+## 7. Governance & Accountability
+- [ ] Is there an independent ethics oversight board?
+- [ ] Are decision-making processes documented and reviewable?
+- [ ] Are conflicts of interest disclosed?
 
-## Section 4: Transparency & Audit
+## Final Approval
 
-- [ ] All data sources are documented and accessible.
-- [ ] The simulation code is open and executable.
-- [ ] The version history is maintained with commit logs.
-- [ ] A public dashboard shows real-time progress and feedback.
+- [ ] All items checked: 
+- [ ] Reviewer: 
+- [ ] Date: 
 
-## Section 5: Exit Conditions
 
-- [ ] Clear criteria for halting the vision if harm occurs.
-- [ ] A mechanism for public vote to terminate the initiative.
-- [ ] An independent review board has authority to pause or stop implementation.
-
-## Approval
-
-| Reviewer | Role | Signature | Date |
-|---------|------|-----------|------|
-|         | Ethics Board Chair |           |      |
-|         | Public Accountability Forum |           |      |
-|         | Prophetic Council |           |      |
-
-> **Final Decision**: [ ] Approved [ ] Rejected [ ] Requires Revision
-
----
-*Last updated: {{CURRENT_DATE}}*
-
-*This document is version-controlled. Changes are logged in the repository.*
+### Version History
+- v1.0: Initial version (2025-08-30)
+- v1.1: Added long-term impact section (2025-08-30)
+- v1.2: Enhanced consent mechanisms (2025-08-30)
