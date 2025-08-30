@@ -26,7 +26,7 @@ This document establishes a responsible framework for prophetic leadership in th
 
 1. **Vision Statement**
    - Articulate the future you see.
-   - Use clear, non-absolute language: \"I suspect that...\" or \"This may lead to...\".
+   - Use clear, non-absolute language: "I suspect that..." or "This may lead to..."
 
 2. **Modeling & Simulation**
    - Convert the vision into a testable scenario using AI, systems dynamics, or scenario planning.
@@ -72,9 +72,9 @@ All versions of the vision are stored in the repository with:
 
 ## Example: Reframing a Prophet’s Message
 
-**Original (Absolute)**: \"The world must be purified by fire.\"
+**Original (Absolute)**: "The world must be purified by fire."
 
-**Reframed (Prophetic Framework)**: \"I observe increasing systemic instability. I propose a pilot program to restructure energy access to reduce inequality and ecological strain. This will be tested in three regions over 18 months with full public oversight and exit criteria if harm is detected.\"
+**Reframed (Prophetic Framework)**: "I observe increasing systemic instability. I propose a pilot program to restructure energy access to reduce inequality and ecological strain. This will be tested in three regions over 18 months with full public oversight and exit criteria if harm is detected."
 
 ## Conclusion
 
