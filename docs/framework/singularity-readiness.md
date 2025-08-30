@@ -34,7 +34,7 @@ The Singularity-Readiness Framework is a strategic guide to prepare individuals,
 
 ### Phase 3: Organizational Adaptation (18–36 months)
 - Introduce AI co-pilot roles in governance, healthcare, and education.
-- Create "Redundancy Audits" for critical systems.
+- Create \"Redundancy Audits\" for critical systems.
 
 ### Phase 4: Societal Co-Design (36+ months)
 - Launch citizen assemblies for AI policy and ethics.
@@ -54,5 +54,4 @@ The Singularity-Readiness Framework is a strategic guide to prepare individuals,
 - **Ethical Compliance Rate**: % of AI actions conforming to predefined ethical rules.
 
 ---
-
 *This document is a living framework. Contributions and updates are welcome via pull request. Maintained by the Singularity Readiness Task Force.*
