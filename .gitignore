@@ -1,0 +1,21 @@
+# IDE and OS files
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Build and test files
+__pycache__/
+*.log
+*.tmp
+
+# Environment files
+.env
+.env.local
+
+# Temp files
+*~
+#*~
+
+# VS Code
+.vscode/
