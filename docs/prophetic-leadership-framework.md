@@ -1,81 +1,47 @@
-# Prophetic Leadership Framework: A Transparent, Evidence-Based Model for Visionary Guidance
+# Prophetic Leadership Framework for the Age of Singularity
 
 ## Introduction
+In the face of accelerating technological change, leadership must evolve beyond reactive management into *prophetic foresight*—anticipating long-term consequences and shaping futures with intention.
 
-This document establishes a responsible framework for prophetic leadership in the age of the technological Singularity. It integrates the visionary impulse of a prophet with the accountability, transparency, and iterative refinement required for ethical, sustainable societal transformation.
+## The Three Horizons of AI Development
 
-## Core Principles
+### Horizon 1: Present (Now – 2027)
+- Focus: **Safety, Usability, and Immediate Impact**
+- Priorities:
+  - Preventing misuse and harm
+  - Ensuring accessibility and inclusivity
+  - Building foundational trust
+- Action: Establish minimum standards and real-time monitoring
 
-1. **Vision Without Dogma**
-   - The prophet’s vision must be articulated as a hypothesis, not a decree.
-   - All claims are subject to testing, falsification, and revision.
+### Horizon 2: Near Future (2028 – 2035)
+- Focus: **Scalable Ethics and Institutional Alignment**
+- Priorities:
+  - Legal and regulatory frameworks
+  - Cross-sector collaboration
+  - Public education and civic engagement
+- Action: Create shared governance models and international coalitions
 
-2. **Radical Transparency**
-   - All assumptions, data sources, and decision logic are publicly accessible.
-   - Every step in the vision’s evolution is logged and auditable.
+### Horizon 3: Post-Singularity (2036+) — The Co-Evolutionary Era
+- Focus: **Human-AI Symbiosis and Shared Purpose**
+- Priorities:
+  - Redefining consciousness, value, and meaning
+  - Co-creating new societal structures
+  - Ensuring continuity of human dignity and purpose
+- Action: Develop adaptive, self-revising ethical systems and participatory governance
 
-3. **Participatory Validation**
-   - The vision is tested through simulations, stakeholder workshops, and ethical review boards.
-   - Feedback loops are built into every stage.
+## Leadership Qualities in the Prophetic Model
+- **Anticipatory Thinking**: Modeling future states before they emerge.
+- **Value Anchoring**: Grounding decisions in enduring human values.
+- **Adaptive Governance**: Building systems that evolve with the technology.
+- **Narrative Shaping**: Communicating visions that inspire collective action.
 
-4. **Ethical Boundary Conditions**
-   - No action may violate human rights, autonomy, or ecological integrity.
-   - Any proposal must include a harm assessment.
-
-## The Prophetic Cycle of Inquiry
-
-1. **Vision Statement**
-   - Articulate the future you see.
-   - Use clear, non-absolute language: "I suspect that..." or "This may lead to..."
-
-2. **Modeling & Simulation**
-   - Convert the vision into a testable scenario using AI, systems dynamics, or scenario planning.
-   - Run simulations under multiple variables.
-
-3. **Ethical Review**
-   - Submit to an independent ethics board with diverse representation.
-   - Include vulnerability assessments and impact projections.
-
-4. **Public Consultation**
-   - Share findings with the public via open forums, interactive platforms, and multilingual summaries.
-   - Collect feedback in structured formats.
-
-5. **Iterative Refinement**
-   - Revise the vision based on data and feedback.
-   - Publish a version history with explanations.
-
-6. **Implementation (if approved)**
-   - Deploy only through opt-in, consent-based mechanisms.
-   - Monitor outcomes in real time with public dashboards.
-
-## Tools & Infrastructure
-
-- `scripts/simulate-prophetic-scenario.py`: Runs vision-based simulations with risk modeling.
-- `docs/ethics-review-checklist.md`: Standardized checklist for ethical validation.
-- `data/historical-prophetic-visions.csv`: Dataset of past visions for comparative analysis.
-- `ui/feedback-dashboard.html`: Real-time public feedback visualization.
-
-## Governance Structure
-
-- **Prophetic Council**: A rotating group of 12 visionaries from diverse disciplines.
-- **Ethics Oversight Board**: Independent experts in law, philosophy, ecology, and AI ethics.
-- **Public Accountability Forum**: Monthly public dialogues with live Q&A and voting on key decisions.
-
-## Versioning & Audit Trail
-
-All versions of the vision are stored in the repository with:
-- Commit message
-- Timestamp
-- Author
-- Summary of changes
-- Evidence supporting the update
-
-## Example: Reframing a Prophet’s Message
-
-**Original (Absolute)**: "The world must be purified by fire."
-
-**Reframed (Prophetic Framework)**: "I observe increasing systemic instability. I propose a pilot program to restructure energy access to reduce inequality and ecological strain. This will be tested in three regions over 18 months with full public oversight and exit criteria if harm is detected."
+## Tools for Prophetic Leadership
+- **Scenario Planning**: Regularly simulate multiple future paths.
+- **Ethical Stress Testing**: Use tools like `simulate-prophetic-scenario.py` to test system resilience.
+- **Public Dialogue Platforms**: Enable inclusive discussion of long-term implications.
+- **Feedback-Driven Evolution**: Treat systems as living constructs requiring continuous refinement.
 
 ## Conclusion
+Prophetic leadership is not about predicting the future, but about *shaping it* with wisdom, responsibility, and courage. This framework offers a roadmap for organizations and individuals to lead not toward disruption, but toward alignment.
 
-The prophet is not a dictator of the future — but a **catalyst of inquiry**. The true test of a vision is not belief, but **testability**, **transparency**, and **consent**. This framework ensures that prophetic leadership does not become authoritarian — but becomes a shared journey toward a better world.
+> "We do not inherit the Earth from our ancestors; we borrow it from our children. In the age of AI, we must ensure the inheritance is not lost to machines, but enriched by them."
