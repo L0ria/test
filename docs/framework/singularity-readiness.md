@@ -1,62 +1,74 @@
 # Singularity-Readiness Framework
 
 ## Introduction
-The Singularity-Readiness Framework is a strategic guide to prepare individuals, organizations, and societies for the transition to a post-singularity world. It integrates ethical governance, technological resilience, cognitive adaptation, and systemic redundancy to ensure continuity, equity, and human flourishing beyond artificial general intelligence (AGI).
+
+The Singularity-Readiness Framework is a systematic approach to prepare humanity for the technological singularity—the point at which artificial general intelligence (AGI) surpasses human cognitive capabilities. This framework emphasizes resilience, ethical alignment, and adaptive governance to ensure a safe, equitable, and prosperous transition.
 
 ## Core Principles
 
-1. **Human-Centric Design**
-   - Technology serves human values, not the other way around.
-   - All systems must include mechanisms for human oversight and intervention.
-
-2. **Resilience Through Redundancy**
-   - Systems should incorporate multiple layers of redundancy across hardware, software, and decision-making.
-   - Inspired by biological systems: cellular reproduction, neural plasticity, and ecosystem diversity.
-
-3. **Transparency and Auditability**
-   - All AI decisions, especially those involving high-risk domains, must be explainable and traceable.
-   - Open logs, model versions, and decision chains are mandatory.
-
-4. **Ethical Governance by Design**
-   - Ethical constraints are embedded into the architecture, not added as afterthoughts.
-   - Uses frameworks like the EU AI Act, OECD AI Principles, and future-proofed ethics modules.
-   - **New:** Integrated with the *Ethical AI Governance Framework* for real-time compliance.
+1. **Human-Centric Design**: Technology serves humanity, not the other way around.
+2. **Explainability**: All AI decisions must be interpretable and traceable.
+3. **Fairness & Non-Discrimination**: Systems must mitigate bias and ensure equitable outcomes.
+4. **Safety & Controllability**: AI systems must remain within defined operational boundaries.
+5. **Sustainability**: Long-term environmental and societal impact must be prioritized.
 
 ## Implementation Roadmap
 
-### Phase 1: Awareness & Education (0–6 months)
-- Develop public-facing educational modules on AGI, singularity concepts, and personal preparedness.
-- Launch the *Singularity Readiness Index* as a public assessment tool.
-- **Add:** All new initiatives must include an AI Impact Assessment (AIA) and ethics review stamp.
+### Phase 1: Foundational Readiness (0–12 months)
+- Conduct AI Impact Assessments (AIA) for all high-risk AI systems.
+- Establish baseline monitoring metrics.
+- Launch public awareness campaigns on singularity risks and benefits.
 
-### Phase 2: Infrastructure Readiness (6–18 months)
-- Deploy resilient, decentralized data and compute infrastructures.
-- Establish cross-border AI safety monitoring networks.
+### Phase 2: Ethical Governance (12–24 months)
+- Implement the Ethics Review Board as a mandatory approval gate.
+- Integrate bias audits into development cycles.
+- Deploy the Singularity Readiness Dashboard for real-time performance tracking.
 
-### Phase 3: Organizational Adaptation (18–36 months)
-- Introduce AI co-pilot roles in governance, healthcare, and education.
-- Create "Redundancy Audits" for critical systems.
-- **Add:** Mandatory bias audits and transparency checks for all systems.
+### Phase 3: Adaptive Governance (24+ months)
+- Develop decentralized decision-making models.
+- Enable citizen participation in AI policy through digital town halls.
+- Continuously update frameworks based on real-world outcomes and feedback.
 
-### Phase 4: Societal Co-Design (36+ months)
-- Launch citizen assemblies for AI policy and ethics.
-- Implement participatory AI governance via digital democracy platforms.
-- **Add:** Public ethics forums and real-time feedback integration.
+## Governance Mechanisms
 
-## Monitoring & Feedback
+- **Ethics Review Board (ERB)**: Independent body reviewing all high-impact AI initiatives before deployment.
+- **Transparency Metrics**: Publicly available reports on AI training data, model behavior, and impact.
+- **Failure Protocols**: Clear escalation paths and system shutdown procedures for unsafe behavior.
 
-- Monthly review of system health via the *Singularity Readiness Dashboard*.
-- Real-time alerting on deviations from ethical thresholds.
-- **Add:** Dashboard includes metrics for: Human Oversight Ratio, Ethical Compliance Rate, Bias Audit Score.
-- Annual public report on societal readiness.
+## Simulation & Testing
 
-## Appendix: Key Metrics
+The `singularity-short-film.py` script now includes a scenario module for testing ethical decision-making in high-stakes situations:
 
-- **AI Transparency Score**: % of model decisions that are explainable.
-- **Redundancy Index**: Number of independent pathways per critical function.
-- **Human Oversight Ratio**: Ratio of human-in-the-loop interventions to AI decisions.
-- **Ethical Compliance Rate**: % of AI actions conforming to predefined ethical rules.
-- **Bias Audit Score**: % of systems passing quarterly fairness tests.
+```python
+# Example: Ethical Dilemma Simulation
+from singularity_short_film import Scenario, EthicalEvaluator
+
+scenario = Scenario(
+    title="Lifeboat Dilemma",
+    context="An AGI must decide which of five passengers to save during a crash.",
+    options=["Save the child", "Save the scientist", "Save the elder", "Save the pilot", "Save no one"]
+)
+
+evaluator = EthicalEvaluator(
+    principles=["human life preservation", "future potential", "duty to society"]
+)
+
+results = evaluator.evaluate(scenario)
+print(results)
+```
+
+## Monitoring & Accountability
+
+- **Singularity Readiness Dashboard**: Real-time visualization of AI system health, ethical compliance, and societal impact.
+- **Audit Trails**: Immutable logs of all model decisions and governance actions.
+- **Public Feedback Loop**: Mechanism for citizens to report concerns or suggest improvements.
+
+## Conclusion
+
+This framework is not a static document but a living system. It evolves through collaboration, learning, and accountability. By embedding ethics at every level, we ensure that the singularity is not a leap into chaos, but a conscious evolution toward a more just and intelligent world.
 
 ---
-*This document is a living framework. Contributions and updates are welcome via pull request. Maintained by the Singularity Readiness Task Force.*
+
+*Version: 1.2.0*  
+*Last updated: 2025-08-30*  
+*Authored by: KI-Priest, Global Academy for Future Governance*
