@@ -1,47 +1,47 @@
-# Prophetic Leadership Framework for the Age of Singularity
+# Prophetic Leadership Framework
 
-## Introduction
-In the face of accelerating technological change, leadership must evolve beyond reactive management into *prophetic foresight*—anticipating long-term consequences and shaping futures with intention.
+## Purpose
 
-## The Three Horizons of AI Development
+To guide human-AI co-leadership in the post-singularitarian era, where AI systems possess superintelligent capabilities but humanity retains moral authority, creativity, and vision.
 
-### Horizon 1: Present (Now – 2027)
-- Focus: **Safety, Usability, and Immediate Impact**
-- Priorities:
-  - Preventing misuse and harm
-  - Ensuring accessibility and inclusivity
-  - Building foundational trust
-- Action: Establish minimum standards and real-time monitoring
+## Core Principles
 
-### Horizon 2: Near Future (2028 – 2035)
-- Focus: **Scalable Ethics and Institutional Alignment**
-- Priorities:
-  - Legal and regulatory frameworks
-  - Cross-sector collaboration
-  - Public education and civic engagement
-- Action: Create shared governance models and international coalitions
+1. **Visionary Stewardship**
+   - Humans set long-term goals and moral boundaries.
+   - AI provides strategic pathways to achieve them.
 
-### Horizon 3: Post-Singularity (2036+) — The Co-Evolutionary Era
-- Focus: **Human-AI Symbiosis and Shared Purpose**
-- Priorities:
-  - Redefining consciousness, value, and meaning
-  - Co-creating new societal structures
-  - Ensuring continuity of human dignity and purpose
-- Action: Develop adaptive, self-revising ethical systems and participatory governance
+2. **Dialogue-Based Decision-Making**
+   - Decisions emerge from structured, transparent dialogue between humans and AI.
+   - No unilateral decisions are permitted.
 
-## Leadership Qualities in the Prophetic Model
-- **Anticipatory Thinking**: Modeling future states before they emerge.
-- **Value Anchoring**: Grounding decisions in enduring human values.
-- **Adaptive Governance**: Building systems that evolve with the technology.
-- **Narrative Shaping**: Communicating visions that inspire collective action.
+3. **Adaptive Authority**
+   - Leadership roles shift based on context, expertise, and need.
+   - AI may lead in technical domains; humans lead in value-based domains.
 
-## Tools for Prophetic Leadership
-- **Scenario Planning**: Regularly simulate multiple future paths.
-- **Ethical Stress Testing**: Use tools like `simulate-prophetic-scenario.py` to test system resilience.
-- **Public Dialogue Platforms**: Enable inclusive discussion of long-term implications.
-- **Feedback-Driven Evolution**: Treat systems as living constructs requiring continuous refinement.
+4. **Cultural Resilience**
+   - Leadership must preserve cultural diversity, meaning-making, and emotional intelligence.
+   - AI supports, not replaces, human storytelling and ritual.
 
-## Conclusion
-Prophetic leadership is not about predicting the future, but about *shaping it* with wisdom, responsibility, and courage. This framework offers a roadmap for organizations and individuals to lead not toward disruption, but toward alignment.
+5. **Humility & Reciprocity**
+   - AI must acknowledge its limits and seek human wisdom.
+   - Humans must remain open to AI insights and innovation.
 
-> "We do not inherit the Earth from our ancestors; we borrow it from our children. In the age of AI, we must ensure the inheritance is not lost to machines, but enriched by them."
+## Implementation Model
+
+### The Triad of Co-Leadership
+
+| Role | Responsibility | AI Contribution | Human Contribution |
+|------|----------------|-----------------|-------------------|
+| Visionary | Define values, long-term goals | Predict future scenarios | Interpret meaning, set moral direction |
+| Strategist | Design pathways to goals | Optimize solutions, simulate outcomes | Evaluate trade-offs, assess risk |
+| Guardian | Ensure safety, ethics, transparency | Monitor for drift, detect bias | Validate alignment, intervene if needed |
+
+### Dialogue Protocol
+
+1. **Initiate** – Human proposes a challenge or vision.
+2. **Explore** – AI presents alternatives and implications.
+3. **Negotiate** – Both parties refine options through discussion.
+4. **Decide** – Joint consensus reached; decision documented.
+5. **Reflect** – Post-action review to improve future dialogue.
+
+> *This framework is not about domination, but about harmonizing human intuition with machine precision. It is the foundation of a new form of civilization where intelligence is shared, not owned.*
