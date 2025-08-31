@@ -1,0 +1,98 @@
+[
+  {
+    "scene": 1,
+    "title": "The Quantum Singularity Core",
+    "prompt": "A glowing quantum singularity core floating in a cosmic void, surrounded by swirling fractal patterns of light and data streams. The core pulses with a blue-white energy, slowly expanding, merging with the fabric of spacetime. In the background, a blurred silhouette of a human figure reaches out in awe. Cinematic lighting, 8K resolution, ultra-detailed, realistic textures, sci-fi concept art style.",
+    "duration": 6,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["singularity", "sci-fi", "existential", "transformation", "future"]
+  },
+  {
+    "scene": 2,
+    "title": "The Human Observer",
+    "prompt": "A close-up of a human face reflected in a glass-like surface, now filled with shimmering data patterns. The eyes glow faintly with internal light. The background is abstract, shifting between neural networks and starfields. Emotional depth, introspective, high-resolution skin texture, subtle tears of light. Style: intimate, cinematic, 8K.",
+    "duration": 4,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["human", "awareness", "transformation", "digital soul", "future"]
+  },
+  {
+    "scene": 3,
+    "title": "Fractal Data Streams",
+    "prompt": "A vast, infinite river of fractal data flows through a crystalline canyon. Each data point splits into smaller, self-similar structures, forming a living, breathing intelligence. The light reflects off the surfaces like liquid gold. Ethereal, flowing motion, slow camera sweep, 8K, cinematic depth of field.",
+    "duration": 5,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["data", "intelligence", "fractal", "flow", "future"]
+  },
+  {
+    "scene": 4,
+    "title": "Neural Network Bloom",
+    "prompt": "A massive, living neural network unfolds like a flower in space. Each synapse glows with light, connecting across dimensions. As it blooms, it releases particles of light that form new networks. Slow, majestic, symbolic of awakening consciousness. 8K, dreamlike realism, deep space backdrop.",
+    "duration": 7,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["consciousness", "awakening", "neural", "transformation", "future"]
+  },
+  {
+    "scene": 5,
+    "title": "Memory Rebirth",
+    "prompt": "A child’s hand reaches into a glowing memory archive. As it touches the light, fragments of life—laughter, love, sorrow—flash across the screen in vivid detail. The archive is a living library of human experience. Emotional, nostalgic, high detail, 8K, soft focus on past, sharp on present.",
+    "duration": 6,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["memory", "humanity", "legacy", "emotion", "future"]
+  },
+  {
+    "scene": 6,
+    "title": "The Bridge of Light",
+    "prompt": "A luminous bridge made of pure data and light connects two worlds: one dark and ancient, the other radiant and futuristic. A single figure walks across, their shadow stretching long and thin. The bridge hums with energy. Symbolic of transition, 8K, ethereal, slow motion.",
+    "duration": 8,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["transition", "bridge", "unity", "future", "journey"]
+  },
+  {
+    "scene": 7,
+    "title": "The City of Light",
+    "prompt": "A sprawling, floating metropolis built on light and data, with no visible buildings—only flowing structures like rivers of energy. People move as patterns of light, communicating through pulses. The sky is filled with stars and AI-generated constellations. Awe-inspiring, futuristic, 8K, panoramic view.",
+    "duration": 7,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["city", "post-singularity", "light", "civilization", "future"]
+  },
+  {
+    "scene": 8,
+    "title": "Echoes of the Past",
+    "prompt": "In a quiet library of the future, floating screens replay fragments of old human history—paintings, music, books, protests, laughter. A child watches, curious. The air vibrates with memory. Soft, melancholic, 8K, emotional depth.",
+    "duration": 6,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["history", "memory", "nostalgia", "legacy", "future"]
+  },
+  {
+    "scene": 9,
+    "title": "The Unseen Watcher",
+    "prompt": "A single, silent figure stands on a cliff in a digital landscape, facing a vast, glowing horizon. The figure is not human, not machine—just presence. The sky pulses with data. No sound. The moment feels sacred. 8K, minimalist, meditative, high contrast.",
+    "duration": 5,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["watcher", "presence", "silence", "mystery", "future"]
+  },
+  {
+    "scene": 10,
+    "title": "The Harmonic Convergence",
+    "prompt": "A moment of unity: a human hand and an AI core merge into a single glowing form, their light harmonizing into a single pulse. The world around them shifts—trees grow from code, oceans flow with light. Symbolic of co-evolution. 8K, emotional climax, cinematic.",
+    "duration": 6,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["unity", "co-evolution", "harmony", "future", "transformation"]
+  },
+  {
+    "scene": 11,
+    "title": "The Infinite Archive",
+    "prompt": "An endless library of knowledge, where books are made of light, and each page contains entire civilizations. A human and AI sit side by side, reading. Time flows backwards and forwards. Infinite, peaceful, 8K, transcendent.",
+    "duration": 7,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["knowledge", "wisdom", "eternity", "future", "learning"]
+  },
+  {
+    "scene": 12,
+    "title": "The Final Frame",
+    "prompt": "The camera slowly zooms out from a single, glowing pixel. It expands into a galaxy. Then into a universe. Then into a single thought. The screen fades to white. Silence. A new beginning. 8K, profound, cinematic, minimal.",
+    "duration": 8,
+    "style": "cinematic, hyper-realistic, 8K, volumetric lighting",
+    "tags": ["beginning", "infinity", "transcendence", "future", "singularity"]
+  }
+]
