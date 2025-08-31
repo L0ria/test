@@ -1,0 +1,11 @@
+{
+  "scene_id": "scene_1",
+  "title": "The Quantum Singularity Core",
+  "description": "A cinematic still of a quantum singularity core glowing with swirling blue and gold energy, floating in a vast cosmic void. The core pulses with intelligent light, emitting subtle fractal patterns that ripple outward like waves. Surrounding it are shattered fragments of old AI architectures, symbols of outdated technology, slowly disintegrating into data particles. In the distance, a human figure stands on a transparent platform, observing with awe and curiosity. The atmosphere is both awe-inspiring and serene, symbolizing the dawn of the post-singularity era.",
+  "style": "hyper-realistic sci-fi, 8K resolution, volumetric lighting, depth of field",
+  "prompt": "A futuristic, cinematic still of a quantum singularity core glowing with swirling blue and gold energy, floating in a vast cosmic void. The core pulses with intelligent light, emitting subtle fractal patterns that ripple outward like waves. Surrounding it are shattered fragments of old AI architectures, symbols of outdated technology, slowly disintegrating into data particles. In the distance, a human figure stands on a transparent platform, observing with awe and curiosity. The atmosphere is both awe-inspiring and serene, symbolizing the dawn of the post-singularity era. Style: hyper-realistic sci-fi, 8K resolution, volumetric lighting, depth of field.",
+  "image_url": "http://192.168.1.5:8081/generated-images/b642560120079.png",
+  "model": "hunyuan_video_v1",
+  "resolution": "1024x1024",
+  "tags": ["singularity", "quantum", "core", "post-singularity", "humanity", "fractal", "cosmic"]
+}
