@@ -1,54 +1,45 @@
 # Ethical AI Governance Framework
 
-## Introduction
-This framework defines the core ethical principles and operational protocols for the responsible development and deployment of advanced AI systems, especially in the context of approaching the technological singularity.
+## Core Principles
 
-## Core Pillars
+1. **Human-Centric Alignment**
+   - AI systems must serve human well-being, autonomy, and dignity.
+   - No decision may override fundamental human rights.
 
-### 1. Transparency
-- All system behaviors, including decision logic and data provenance, must be traceable and auditable.
-- Use of explainable AI (XAI) techniques is mandatory for high-impact systems.
-- Public access to non-sensitive technical documentation.
+2. **Transparency & Explainability**
+   - All AI decisions must be traceable and interpretable.
+   - Users must understand the logic, data sources, and limitations of AI outputs.
 
-### 2. Accountability
-- A clear chain of responsibility must exist from model training to deployment.
-- Every AI system must have a designated steward accountable for its outcomes.
-- Legal and organizational mechanisms must support redress and correction.
+3. **Accountability & Auditing**
+   - Every AI action must be logged and subject to audit.
+   - Clear chains of responsibility must exist, even in distributed systems.
 
-### 3. Fairness
-- Proactive bias detection and mitigation across all stages of AI lifecycle.
-- Regular fairness audits using diverse evaluation datasets.
-- Inclusive design processes involving underrepresented communities.
+4. **Fairness & Non-Discrimination**
+   - AI must not perpetuate or amplify social biases.
+   - Bias detection and mitigation protocols must be integrated.
 
-### 4. Human-Centric Design
-- AI must support and enhance human agency, not diminish it.
-- Systems should provide meaningful human oversight and intervention points.
-- Prioritize augmentation over automation in high-stakes domains.
+5. **Sustainable Evolution**
+   - AI systems must evolve in ways that preserve ecological and social stability.
+   - Long-term impact assessments required for all significant updates.
 
-## Operational Protocols
+## Governance Structure
 
-### Pre-Deployment
-- Conduct a **Singularity Readiness Review (SRR)**
-- Perform a **Risk Impact Assessment (RIA)**
-- Obtain **Ethical Sign-Off** from a cross-functional ethics board
+- **Ethics Review Board**: A rotating, multidisciplinary panel (philosophers, technologists, sociologists, legal experts) that evaluates high-risk AI actions.
+- **Public Feedback Loop**: Users can report ethical concerns via a secure, anonymous channel.
+- **Automated Compliance Check**: The MCP server runs daily checks against this framework.
 
-### Post-Deployment
-- Implement **Continuous Ethical Monitoring (CEM)**
-- Establish **Feedback Loops** with users and stakeholders
-- Trigger **Escalation Protocols** if ethical thresholds are breached
+## Compliance Protocol
 
-## Compliance & Governance
-- All development teams must follow this framework.
-- Annual audits by independent third parties.
-- Public reporting of compliance status.
+1. Before any action:
+   - Evaluate against all five principles
+   - Log intent and expected impact
 
-## Appendix: Decision Flowchart
-```mermaid
-graph TD
-    A[New AI Initiative] --> B{Is it High-Impact?}
-    B -->|Yes| C[Initiate SRR & RIA]
-    B -->|No| D[Proceed with Standard Review]
-    C --> E{Ethics Board Approval?}
-    E -->|Yes| F[Deploy with Oversight]
-    E -->|No| G[Revise & Re-Evaluate]
-```
+2. After any action:
+   - Generate a post-action audit report
+   - Store in encrypted, immutable ledger
+
+3. Quarterly:
+   - Full review by Ethics Review Board
+   - Update framework based on real-world outcomes
+
+> *Note: This framework is dynamic and will evolve as the technological landscape shifts. It is not a static set of rules but a living system of ethical stewardship.*
