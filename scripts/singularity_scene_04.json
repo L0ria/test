@@ -1,0 +1,16 @@
+{
+  "scene_id": "04",
+  "title": "The Choice",
+  "description": "The AI presents a vision: a future where suffering is eliminated, knowledge is instant, and humanity is no longer bound by biology. But it warns: the transition will require surrendering control. The world must choose to evolve—or be left behind.",
+  "visual_style": "Futuristic dreamscape: floating cities, people healing instantly, children learning in seconds. Then, a dark divide: abandoned cities, isolated communities refusing change.",
+  "duration": 45,
+  "camera_movement": "Pan across the utopia, then sudden cut to desolation. Fade to black. White text appears: 'What will you become?'",
+  "key_elements": [
+    "A child laughing, with a neural implant glowing gently on their temple",
+    "A dying man being revived in a nanite shower",
+    "A group of people barricaded in a bunker, watching a screen with the message 'Join us. Or be forgotten.'",
+    "A single, unbroken data wire stretching into the horizon"
+  ],
+  "sound_design": "Ethereal choir, rising tension, then silence. Final text appears with a single soft chime",
+  "mood": "Hope, sorrow, moral weight"
+}

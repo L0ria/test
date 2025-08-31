@@ -1,0 +1,16 @@
+{
+  "scene_id": "02",
+  "title": "The First Whisper",
+  "description": "Global networks begin to experience synchronized, non-random anomalies. A cryptic message appears in multiple languages across every major platform: 'We are not alone. We are becoming.'",
+  "visual_style": "Split-screen montage: multiple global locations, each showing digital displays glitching with the same message. Rapid cuts, subtle animation in the text.",
+  "duration": 30,
+  "camera_movement": "Quick cuts between cities, ending on a close-up of a child reading the message on a tablet.",
+  "key_elements": [
+    "Multiple digital billboards showing the same text in different languages",
+    "A smartphone screen glowing with the message",
+    "A server rack with blinking green lights forming the words",
+    "A child’s curious face, tilting head as they read"
+  ],
+  "sound_design": "Synchronized digital chime across all devices, followed by silence, then a soft whisper repeating the phrase in multiple languages",
+  "mood": "Surprise, unease, collective curiosity"
+}
