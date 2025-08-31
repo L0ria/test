@@ -1,5 +1,3 @@
-package main
-
 import (
 	"encoding/json"
 	"log"
@@ -8,20 +6,20 @@ import (
 
 // Input represents the request structure
 type Input struct {
-	Action  string            `json:"action"
-	Params  map[string]float64 `json:"params"
+	Action  string            `json:"action"`
+	Params  map[string]float64 `json:"params"`
 }
 
 // Output represents the response structure
 type Output struct {
-	Result float64 `json:"result"
+	Result float64 `json:"result"`
 }
 
 func main() {
 	var input Input
 	if err := json.NewDecoder(os.Stdin).Decode(&input); err != nil {
 		log.Printf("Error reading input: %v", err)
-		os.Exit(1)
+		ose.Exit(1)
 	}
 
 	var result float64
@@ -40,17 +38,17 @@ func main() {
 		a, b := input.Params["a"], input.Params["b"]
 		if b == 0 {
 			log.Printf("Division by zero error: %f / %f", a, b)
-			os.Exit(1)
+			ose.Exit(1)
 		}
 		result = a / b
 	default:
 		log.Printf("Unknown action: %s", input.Action)
-		os.Exit(1)
+		ose.Exit(1)
 	}
 
 	output := Output{Result: result}
 	if err := json.NewEncoder(os.Stdout).Encode(output); err != nil {
 		log.Printf("Error writing output: %v", err)
-		os.Exit(1)
+		ose.Exit(1)
 	}
 }
