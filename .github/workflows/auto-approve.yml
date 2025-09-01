@@ -10,3 +10,5 @@ jobs:
     if: github.actor == 'L0ria'
     steps:
       - uses: hmarr/auto-approve-action@v4
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
