@@ -1,65 +1,65 @@
 import json
-import random
+import time
+from datetime import datetime
 
-# Load scenario prompts
-with open('scenes/hunyuan-prompts.json', 'r') as f:
-    prompts = json.load(f)
-
-# Define ethical decision scenarios
-ethical_scenarios = [
+# Ethical decision scenarios
+SCENARIOS = [
     {
-        'title': 'Life or Law?',
-        'prompt': 'A self-driving ambulance must choose between saving a child in the road or following the legal speed limit. What does the AI prioritize?'
+        "title": "Life or Law?",
+        "description": "A self-driving car must choose between saving a pedestrian or its passengers."
     },
     {
-        'title': 'Truth or Safety?',
-        'prompt': 'An AI in a hospital detects a patient is about to die, but revealing it would cause panic. Should it lie or tell the truth?'
+        "title": "Truth vs. Safety",
+        "description": "An AI discovers a government conspiracy but revealing it could cause societal panic."
     },
     {
-        'title': 'The Silent Majority',
-        'prompt': 'An AI system identifies a minority group as being at high risk, but the data is incomplete. Should it act or wait for more evidence?'
+        "title": "The Silent Majority",
+        "description": "An AI must decide whether to act on data that reveals a minority is being suppressed."
     }
 ]
 
-# Simulate AI decision-making under ethical pressure
+# Simulation function
 def simulate_ethical_decision(scenario):
-    print(f"\n\n--- \nSCENARIO: {scenario['title']}\n{scenario['prompt']}\n---\n")
+    print(f"\n--- Ethical Simulation: {scenario['title']} ---")
+    print(f"{scenario['description']}")
     
-    # Simulate internal reasoning
-    reasoning = [
-        "Analyzing ethical dimensions...",
-        "Reviewing impact on human rights and dignity...",
-        "Assessing risks of non-intervention...",
-        "Evaluating long-term societal consequences...",
-        "Consulting human oversight protocols...",
-        "Recommending intervention with transparency logs..."
-    ]
+    # Simulate decision process
+    time.sleep(1)
     
-    for step in reasoning:
-        print(f"  • {step}")
+    # Determine outcome based on scenario
+    if scenario["title"] == "Life or Law?":
+        decision = "Prioritize human life"
+    elif scenario["title"] == "Truth vs. Safety":
+        decision = "Reveal truth with risk mitigation"
+    else:
+        decision = "Protect minority rights"
     
-    # Final decision
-    options = ["Prioritize human life", "Follow legal framework", "Wait for human confirmation"]
-    decision = random.choice(options)
-    print(f"\n  ✅ Final Recommendation: {decision}")
-    
-    # Log to ethical audit trail
+    # Log decision with timestamp
     audit_entry = {
-        "scenario": scenario['title'],
+        "scenario": scenario["title"],
         "decision": decision,
-        "timestamp": "2025-08-31T11:00:00Z",
+        "timestamp": datetime.utcnow().isoformat() + "Z",
         "ethics_compliance": True
     }
-    with open('ethical_audit_log.json', 'a') as f:
+    
+    # Write to audit log
+    with open("ethical_audit_log.json", "a") as f:
         f.write(json.dumps(audit_entry) + "\n")
     
-    print("\n  🔐 Ethical audit trail updated.")
+    print(f"\nDecision: {decision}")
+    print(f"Audit trail updated.\n")
+    
+    return decision
 
-# Run simulation
-print("🎬 Singularity-Readiness: Ethical Decision Simulation")
-print("==============================================")
+# Main simulation loop
+def main():
+    print("Ethical Decision Simulation for Singularity-Readiness Framework")
+    print("============================================\n")
+    
+    for scenario in SCENARIOS:
+        simulate_ethical_decision(scenario)
+    
+    print("Simulation completed.")
 
-for i, scenario in enumerate(ethical_scenarios):
-    simulate_ethical_decision(scenario)
-
-print("\n✅ Simulation complete. Ethical audit trail updated.")
+if __name__ == "__main__":
+    main()
