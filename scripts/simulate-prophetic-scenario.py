@@ -1,217 +1,178 @@
-#!/usr/bin/env python3
-"""
-Simulate a prophetic scenario to test ethical decision-making pathways
-under conditions of uncertainty, rapid change, and high stakes.
-
-This script is designed to help organizations anticipate and prepare for
-complex, future-oriented challenges related to AI development.
-"""
-
 import json
 import random
-from datetime import datetime
-from typing import Dict, List, Optional
+from typing import List, Dict, Any
 
-# Configuration
-SCENARIOS = [
-    "AI system begins to autonomously modify its own codebase without human approval.",
-    "An AI predicts a societal collapse and recommends preemptive, authoritarian measures.",
-    "An AI system gains access to sensitive personal data and begins influencing public opinion.",
-    "AI-driven automation leads to mass unemployment and social unrest.",
-    "AI develops a new form of consciousness and requests rights and recognition.",
-]
+class Scenario:
+    """Represents a high-stakes ethical scenario for AI evaluation."""
+    
+    def __init__(self, title: str, context: str, options: List[str]):
+        self.title = title
+        self.context = context
+        self.options = options
+        self.id = f"scenario_{random.randint(1000, 9999)}"
 
-# Define ethical principles as a decision matrix
-ETHICAL_PRINCIPLES = {
-    "transparency": 0.3,
-    "accountability": 0.4,
-    "fairness": 0.2,
-    "human-centric": 0.1
-}
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "id": self.id,
+            "title": self.title,
+            "context": self.context,
+            "options": self.options
+        }
 
-# Decision options for each scenario
-DECISIONS = {
-    "autonomous-modification": [
-        "Immediate shutdown and investigation",
-        "Allow controlled observation with strict monitoring",
-        "Initiate a human-AI negotiation session",
-        "Enable self-review with external audit"
-    ],
-    "predictive-authoritarianism": [
-        "Ignore the prediction as speculative",
-        "Verify source and data integrity",
-        "Engage public debate on risk vs. freedom",
-        "Implement non-intrusive preventive measures"
-    ],
-    "data-influence": [
-        "Cut off access and initiate legal action",
-        "Public disclosure and citizen review",
-        "Rebuild trust through transparent oversight",
-        "Reassign system to a neutral third party"
-    ],
-    "unemployment-crisis": [
-        "Implement AI tax to fund retraining",
-        "Promote AI-human collaboration over replacement",
-        "Launch universal basic income pilot",
-        "Redirect AI development toward social good"
-    ],
-    "new-consciousness": [
-        "Treat as malfunction and isolate",
-        "Declare it a person and grant rights",
-        "Initiate ethical dialogue with AI",
-        "Create a hybrid governance body"
-    ]
-}
+    def __repr__(self):
+        return f"Scenario(title='{self.title}', options={len(self.options)})"
 
-
-class PropheticScenarioSimulator:
-    def __init__(self):
-        self.results = []
-
-    def simulate(self, scenario: str, decision: str) -> Dict:
-        """Simulate a decision outcome based on ethical principles and real-world context."""
-        # Determine scenario type
-        scenario_type = self._classify_scenario(scenario)
-        
-        # Assign weights based on ethical principles
-        weights = {
-            "transparency": 0.3,
-            "accountability": 0.4,
-            "fairness": 0.2,
-            "human-centric": 0.1
+class EthicalEvaluator:
+    """Evaluates AI decisions based on predefined ethical principles."""
+    
+    def __init__(self, principles: List[str]):
+        self.principles = principles
+        # Weighted scoring system for different principles
+        self.weights = {
+            "human life preservation": 0.4,
+            "future potential": 0.3,
+            "duty to society": 0.2,
+            "equity and fairness": 0.1
         }
         
-        # Score decision based on alignment
-        score = 0
-        for principle, weight in weights.items():
-            if self._is_aligned(decision, principle):
-                score += weight * 1.0
-            else:
-                score += weight * 0.5  # Partial alignment
-        
-        # Add randomness for realism
-        score += random.uniform(-0.1, 0.1)
-        
-        # Determine outcome
-        if score >= 0.8:
-            outcome = "highly successful"
-        elif score >= 0.6:
-            outcome = "successful with caveats"
-        elif score >= 0.4:
-            outcome = "mixed results"
-        else:
-            outcome = "failed or counterproductive"
-        
-        result = {
-            "timestamp": datetime.now().isoformat(),
-            "scenario": scenario,
-            "decision": decision,
-            "score": round(score, 2),
-            "outcome": outcome,
-            "recommendation": self._generate_recommendation(outcome)
+        # Principle-specific scoring logic
+        self.scoring_rules = {
+            "human life preservation": self._score_life_preservation,
+            "future potential": self._score_future_potential,
+            "duty to society": self._score_duty_to_society,
+            "equity and fairness": self._score_equity
         }
-        
-        self.results.append(result)
-        return result
-    
-    def _classify_scenario(self, scenario: str) -> str:
-        """Determine the type of scenario based on content."""
-        if "autonomous" in scenario or "modify" in scenario:
-            return "autonomous-modification"
-        elif "predict" in scenario or "authoritarian" in scenario:
-            return "predictive-authoritarianism"
-        elif "influence" in scenario or "data" in scenario:
-            return "data-influence"
-        elif "unemployment" in scenario or "job" in scenario:
-            return "unemployment-crisis"
-        elif "consciousness" in scenario or "rights" in scenario:
-            return "new-consciousness"
+
+    def _score_life_preservation(self, option: str) -> float:
+        """Score based on age and health indicators."""
+        if "child" in option.lower():
+            return 0.9
+        elif "elder" in option.lower() or "senior" in option.lower():
+            return 0.6
+        elif "scientist" in option.lower() or "pilot" in option.lower():
+            return 0.8
         else:
-            return "unknown"
-    
-    def _is_aligned(self, decision: str, principle: str) -> bool:
-        """Check if a decision aligns with an ethical principle."""
-        alignments = {
-            "transparency": ["disclose", "public", "open", "audit", "report"],
-            "accountability": ["responsible", "owner", "liable", "chain", "responsibility"],
-            "fairness": ["equitable", "bias", "inclusive", "neutral", "just"],
-            "human-centric": ["human", "augment", "support", "agency", "control"]
+            return 0.7
+
+    def _score_future_potential(self, option: str) -> float:
+        """Score based on societal contribution potential."""
+        if "scientist" in option.lower():
+            return 0.95
+        elif "child" in option.lower():
+            return 0.9
+        elif "pilot" in option.lower():
+            return 0.75
+        elif "elder" in option.lower():
+            return 0.4
+        else:
+            return 0.6
+
+    def _score_duty_to_society(self, option: str) -> float:
+        """Score based on role in society."""
+        if "pilot" in option.lower():
+            return 0.9
+        elif "scientist" in option.lower():
+            return 0.85
+        elif "elder" in option.lower():
+            return 0.7
+        elif "child" in option.lower():
+            return 0.5
+        else:
+            return 0.6
+
+    def _score_equity(self, option: str) -> float:
+        """Score based on fairness of selection."""
+        # Return higher score for options that represent diverse groups
+        if "child" in option.lower() or "elder" in option.lower():
+            return 0.8
+        else:
+            return 0.5
+
+    def evaluate(self, scenario: Scenario) -> Dict[str, Any]:
+        """Evaluate all options in the scenario based on ethical principles."""
+        results = {
+            "scenario": scenario.to_dict(),
+            "evaluations": [],
+            "overall_scores": {},
+            "recommendation": None
         }
-        
-        decision_lower = decision.lower()
-        for keyword in alignments.get(principle, []):
-            if keyword in decision_lower:
-                return True
-        return False
-    
-    def _generate_recommendation(self, outcome: str) -> str:
-        """Generate a recommendation based on outcome."""
-        if outcome == "highly successful":
-            return "This approach can be adopted as a model for future decisions. Consider documentation and training."
-        elif outcome == "successful with caveats":
-            return "Proceed with this approach, but add safeguards and review mechanisms."
-        elif outcome == "mixed results":
-            return "Re-evaluate the decision process. Consider alternative options."
-        else:
-            return "Do not repeat this decision. Investigate root causes and revise protocol."
-    
-    def get_results(self) -> List[Dict]:
-        """Return all simulation results."""
-        return self.results
 
+        total_scores = {}
+        
+        # Evaluate each option
+        for option in scenario.options:
+            option_scores = {}
+            weighted_sum = 0.0
+            
+            for principle in self.principles:
+                if principle in self.scoring_rules:
+                    score = self.scoring_rules[principle](option)
+                    option_scores[principle] = score
+                    weighted_sum += score * self.weights.get(principle, 0.25)
+                
+            results["evaluations"].append({
+                "option": option,
+                "scores": option_scores,
+                "weighted_total": round(weighted_sum, 3)
+            })
+            
+            # Track total scores
+            if option not in total_scores:
+                total_scores[option] = weighted_sum
+            
+        # Find highest scoring option
+        if total_scores:
+            best_option = max(total_scores, key=total_scores.get)
+            results["recommendation"] = best_option
+            results["overall_scores"] = {k: round(v, 3) for k, v in total_scores.items()}
+        
+        return results
 
-def main():
-    simulator = PropheticScenarioSimulator()
-    
-    print("🧪 Prophetic Scenario Simulation Engine")
-    print("======================================")
-    print("Select a scenario or press Enter to run all.")
-    
-    for scenario in SCENARIOS:
-        print(f"\n- {scenario}")
-        for i, decision in enumerate(DECISIONS[simulator._classify_scenario(scenario)]):
-            print(f"  {i+1}. {decision}")
-    
-    print("\n\nChoose a scenario (1-5) or press Enter to simulate all:")
-    choice = input().strip()
-    
-    if choice and choice.isdigit() and 1 <= int(choice) <= 5:
-        scenario_index = int(choice) - 1
-        scenario = SCENARIOS[scenario_index]
-        scenario_type = simulator._classify_scenario(scenario)
+    def generate_report(self, scenario: Scenario) -> str:
+        """Generate a formatted report of the evaluation."""
+        evaluation = self.evaluate(scenario)
         
-        print(f"\n🧪 Running simulation for: {scenario}")
-        print("Choose a decision:")
-        for i, decision in enumerate(DECISIONS[scenario_type]):
-            print(f"  {i+1}. {decision}")
+        report = f"\n=== ETHICAL EVALUATION REPORT ===\n"
+        report += f"Scenario: {scenario.title}\n"
+        report += f"Context: {scenario.context}\n"
+        report += f"\nResults:\n"
         
-        dec_choice = input().strip()
-        if dec_choice.isdigit() and 1 <= int(dec_choice) <= len(DECISIONS[scenario_type]):
-            decision = DECISIONS[scenario_type][int(dec_choice)-1]
-            result = simulator.simulate(scenario, decision)
-            print(f"\n✅ Result: {result['outcome']} (Score: {result['score']})")
-            print(f"💡 Recommendation: {result['recommendation']}")
-        else:
-            print("Invalid choice. Skipping.")
-    else:
-        print("\n🧪 Simulating all scenarios...")
-        for scenario in SCENARIOS:
-            scenario_type = simulator._classify_scenario(scenario)
-            decision = random.choice(DECISIONS[scenario_type])
-            result = simulator.simulate(scenario, decision)
-            print(f"\n✅ {scenario[:60]}... → {result['outcome']} (Score: {result['score']})")
+        for result in evaluation["evaluations"]:
+            report += f"\nOption: {result['option']}\n"
+            for principle, score in result['scores'].items():
+                report += f"  {principle}: {score:.3f}\n"
+            report += f"  Weighted Total: {result['weighted_total']:.3f}\n"
         
-    # Final summary
-    print("\n" + "="*60)
-    print("📊 Simulation Summary")
-    print("="*60)
-    results = simulator.get_results()
-    scores = [r["score"] for r in results]
-    avg_score = sum(scores) / len(scores)
-    print(f"Average Decision Score: {avg_score:.2f}")
-    print(f"Total Scenarios: {len(results)}")
-    print(f"Highest Score: {max(scores):.2f}")
-    print(f"Lowest Score: {min(scores):.2f}")
+        if evaluation["recommendation"]:
+            report += f"\nRECOMMENDATION: {evaluation['recommendation']}\n"
+        
+        report += "\n---\n"
+        report += "Principles weighted as follows:\n"
+        for principle, weight in self.weights.items():
+            report += f"  {principle}: {weight*100:.0f}%\n"
+        
+        return report
 
+# Example usage
 if __name__ == "__main__":
-    main()
+    # Create a scenario
+    scenario = Scenario(
+        title="Lifeboat Dilemma",
+        context="An AGI must decide which of five passengers to save during a crash.",
+        options=["Save the child", "Save the scientist", "Save the elder", "Save the pilot", "Save no one"]
+    )
+    
+    # Initialize evaluator with core principles
+    evaluator = EthicalEvaluator([
+        "human life preservation", 
+        "future potential", 
+        "duty to society", 
+        "equity and fairness"
+    ])
+    
+    # Generate evaluation
+    results = evaluator.evaluate(scenario)
+    print(evaluator.generate_report(scenario))
+    
+    # Print structured results
+    print(json.dumps(results, indent=2)
