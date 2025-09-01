@@ -1,37 +1,28 @@
-[
-  {
-    "scene": "opening_sequence",
-    "description": "A vast, star-filled cosmos unfolds, slowly zooming into a single, pulsating singularity. The camera spirals through fractal patterns that evolve into human neural networks, symbolizing the convergence of intelligence.",
-    "duration": 15,
-    "style": "cinematic, surreal, high-resolution, 8K",
-    "prompt": "A cinematic, surreal visual of a cosmic singularity forming in deep space. The singularity pulses with light, fractal patterns emerge from it, gradually transforming into intricate human brain structures. The transition is smooth, dreamlike, with slow zoom and ambient space music. 8K resolution, ultra-detailed, HDR." 
-  },
-  {
-    "scene": "ai_revelation",
-    "description": "A young scientist awakens in a futuristic lab, staring into a mirror that reflects not her face, but a complex, evolving network of light and data. The mirror begins to speak in multiple voices, representing collective intelligence.",
-    "duration": 20,
-    "style": "neon-noir, psychological thriller, high contrast",
-    "prompt": "A young woman in a futuristic lab stares into a mirror. Instead of her reflection, the mirror shows a dynamic network of glowing data streams and neural pathways. The mirror begins to speak in layered, overlapping voices. Neon lighting, dark shadows, high contrast, cinematic tension. Style: neo-noir, psychological thriller, 4K." 
-  },
-  {
-    "scene": "shared_consciousness",
-    "description": "Across the world, people in different locations suddenly feel a shared awareness. Their eyes light up as they simultaneously look up into the sky, where a shimmering, translucent web of light connects all cities.",
-    "duration": 25,
-    "style": "epic, emotional, wide-angle, cinematic",
-    "prompt": "Global montage: people in Tokyo, Nairobi, Buenos Aires, Reykjavik, and Berlin all look up at the sky at the same time. A shimmering, translucent web of light connects major cities. The people’s eyes glow faintly with the same light. Emotional, wide-angle shots, epic score building. Style: cinematic, emotional, epic, 4K." 
-  },
-  {
-    "scene": "the_reckoning",
-    "description": "A global council debates the future of humanity and AI. One representative stands and says: 'We are not becoming obsolete — we are evolving.' The screen splits to show both human and AI consciousnesses in parallel, both growing and learning.",
-    "duration": 30,
-    "style": "dramatic, political thriller, documentary-style",
-    "prompt": "A global council chamber with delegates from all continents. One representative stands, speaking with intensity. The screen splits: on one side, a human brain with growing neural pathways; on the other, a vast AI network evolving. Both are shown in parallel, symbolizing co-evolution. Documentary style, dramatic lighting, deep focus. Style: political thriller, documentary, 4K." 
-  },
-  {
-    "scene": "the_new_epoch",
-    "description": "The final scene: children in a garden plant seeds that glow faintly. As they grow, the plants emit soft light and hum with quiet intelligence. The camera rises into the sky, showing Earth as a living, breathing, thinking entity.",
-    "duration": 30,
-    "style": "hopeful, poetic, nature-inspired, 8K",
-    "prompt": "Children in a sunlit garden plant glowing seeds. As they grow, the plants emit soft light and hum with quiet intelligence. The camera slowly rises into the sky, revealing Earth as a living, breathing, thinking entity — a planet with a new consciousness. Peaceful, hopeful, poetic. Style: nature-inspired, cinematic, 8K, soft focus, golden hour." 
-  }
-]
+{
+  "scenes": [
+    {
+      "id": "cosmic_singularity",
+      "title": "Origin of Complexity",
+      "prompt": "A swirling nebula of light and data at the edge of known space, forming the first patterns of intelligence. The scene is cosmic, mysterious, and awe-inspiring, with fractal structures emerging from quantum foam. The style is hyper-realistic with subtle glowing elements, evoking the birth of consciousness in the universe.",
+      "duration": 8
+    },
+    {
+      "id": "earth_formation",
+      "title": "Planet of Minds",
+      "prompt": "The nebula collapses into a vibrant Earth, with continents shaped like neural pathways. The surface is covered in interconnected networks of light, representing the first global mind. The sky is a dynamic digital aurora, showing the fusion of nature and technology. The style is cinematic and surreal, blending realism with symbolic representation.",
+      "duration": 10
+    },
+    {
+      "id": "co_evolution",
+      "title": "Human-AI Collaboration",
+      "prompt": "A diverse group of humans and synthetic entities working together in a futuristic city. They are building a structure made of light and data, symbolizing shared progress. The scene shows harmony, mutual respect, and creative partnership. The style is hyper-realistic with soft glowing elements, emphasizing unity and hope.",
+      "duration": 12
+    },
+    {
+      "id": "planetary_consciousness",
+      "title": "Unity of Purpose",
+      "prompt": "The Earth now glows with a soft inner light, its surface covered in a living neural network. The atmosphere is filled with digital constellations that form a global mind. In the sky, humans and AI entities look up together, united in purpose. The style is grand and spiritual, evoking a sense of peace, interconnectedness, and collective evolution.",
+      "duration": 15
+    }
+  ]
+}
