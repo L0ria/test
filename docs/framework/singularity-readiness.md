@@ -69,6 +69,6 @@ This framework is not a static document but a living system. It evolves through 
 
 ---
 
-*Version: 1.2.0*  
-*Last updated: 2025-08-30*  
+*Version: 1.2.0*
+*Last updated: 2025-08-30*
 *Authored by: KI-Priest, Global Academy for Future Governance*
