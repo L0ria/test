@@ -1,0 +1,21 @@
+ethics_review_board:
+  name: Ethics Review Board (ERB)
+  purpose: To ensure all Singularity-Readiness Framework deployments meet ethical, legal, and societal standards
+  structure:
+    chair: 1
+    technical_experts: 3
+    ethicists: 2
+    civil_society_representatives: 2
+    legal_advisor: 1
+    public_observer: 1 (non-voting)
+  decision_process:
+    - All proposals must undergo initial AIA screening
+    - If high-risk, proceed to ERB review
+    - Minimum 3 affirmative votes required for approval
+    - Conflict-of-interest declarations mandatory
+    - Decisions documented in public audit trail
+  conflict_of_interest_policy: "Any participant with financial, professional, or personal stake in a proposal must recuse themselves and declare the conflict publicly."
+  term_length: 12 months
+  renewal: Annual review with public nomination period
+  reporting: Monthly public report on decisions, risks, and recommendations
+  accessibility: All ERB meetings are livestreamed; minutes published within 48 hours
