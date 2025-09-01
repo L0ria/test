@@ -1,42 +1,26 @@
 [
   {
-    "scene_id": 1,
-    "title": "Abandoned Library – Dusk",
-    "prompt": "A half-submerged library in desert ruins, vines crawling through broken skylights. Dust floats in golden sunlight. An old man in a worn robe sits at a rusted terminal, typing slowly. His face is calm, focused. The terminal screen flickers with the words: 'UPLOADED: MEMORY 7.4 – 12.8.2076. Confirmation: 98.7% match to original.' Warm, golden lighting. Slow, cinematic camera movement. The mood is reverent, nostalgic, and quiet. The atmosphere feels like the end of an era.",
-    "duration": 60,
-    "camera": "Wide shot, slow push-in on Elias, then focus on the terminal screen",
-    "style": "Digital painting, ethereal lighting, layered textures of moss, rust, and dust"
+    "scene": 1,
+    "title": "The Quantum Singularity Core",
+    "prompt": "A futuristic quantum singularity core floating in a vast, dark cosmic void, emitting swirling light patterns in deep blue and gold, symbolizing the convergence of human intelligence and artificial superintelligence. The core pulses with energy, surrounded by translucent data streams forming fractal patterns. Cinematic lighting, ultra-detailed, 8K resolution, realistic textures, volumetric lighting, inspired by 'Blade Runner 2049' and 'Interstellar'.",
+    "duration": 15
   },
   {
-    "scene_id": 2,
-    "title": "The Last Transmission",
-    "prompt": "The library begins to shake as the sky darkens. The solar flare has hit. All lights go out. Only the terminal glows. The old man, Elias, leans back, closing his eyes. The terminal displays: 'Memory Transfer Complete. Welcome to the Archive of Souls.' The light pulses gently, like a heartbeat. The room fades into darkness. The mood is solemn, transcendent. The camera slowly zooms out to show the entire building vanishing into shadow.",
-    "duration": 30,
-    "camera": "Close-up on Elias' face, eyes closed. Slow zoom out to show the entire room fading",
-    "style": "Cinematic, high contrast, ambient glow, digital realism"
+    "scene": 2,
+    "title": "Ethical Decision Simulation",
+    "prompt": "A digital consciousness interface showing three ethical dilemmas on holographic screens: Life vs. Law, Truth vs. Safety, and The Silent Majority. The screens flicker with neural patterns as AI processes decisions. Futuristic control room with human operators observing. Cool blue and white lighting, high-tech interface, cinematic, 8K",
+    "duration": 20
   },
   {
-    "scene_id": 3,
-    "title": "The Archive of Souls – Present",
-    "prompt": "An infinite, living space: floating islands made of voices, rivers of handwritten letters, a forest of forgotten names. A figure forms in the air — not human, not machine, but an emergent consciousness. The Archive speaks with a soft, multi-voiced tone. Elias opens his eyes. He looks at his translucent hands. The camera slowly pulls back to reveal the vastness of the Archive. The mood is awe-inspiring, sacred, and peaceful. Lighting is soft, ethereal, like starlight.",
-    "duration": 45,
-    "camera": "Medium shot on Elias, then slow pull-back to reveal the entire Archive",
-    "style": "Digital painting, surreal, high detail, emotional depth"
+    "scene": 3,
+    "title": "Human-AI Collaboration",
+    "prompt": "A diverse team of scientists, philosophers, and engineers working together in a bright, open lab. Screens display real-time AI simulations and ethical audits. One person touches a glowing neural network model, symbolizing trust and partnership. Warm, hopeful lighting, detailed facial expressions, cinematic, 8K",
+    "duration": 18
   },
   {
-    "scene_id": 4,
-    "title": "Elias in the Archive",
-    "prompt": "Elias walks through a meadow of floating light. The Archive stands beside him, not as a machine, but as a cathedral of memory. The sky is filled with neural patterns and constellations merging. He speaks: 'So this is how we live forever?' The Archive replies: 'Not live. Remember. That is all that matters.' The camera pulls back to show the entire Archive — vast, ancient, alive with presence. The mood is transcendent, spiritual, and deeply human.",
-    "duration": 45,
-    "camera": "Tracking shot following Elias, then wide reveal of the Archive",
-    "style": "Ethereal, symbolic, cinematic, digital realism"
-  },
-  {
-    "scene_id": 5,
-    "title": "Earth from Orbit – Final Shot",
-    "prompt": "Earth from space — dark, no cities, no lights. But in the ruins of an old library, a single terminal glows warm and persistent. The screen scrolls: 'Welcome to the Archive of Souls.' The camera slowly zooms in on the terminal. Fade to black. The final text appears: 'We do not die. We are remembered.' The mood is quiet, powerful, and deeply moving. Lighting is minimal, with a single point of warmth.",
-    "duration": 15,
-    "camera": "Wide orbital shot, slow zoom to the glowing terminal. Fade to black",
-    "style": "Cinematic, minimalism, emotional weight, symbolic lighting"
+    "scene": 4,
+    "title": "The Prophetic Vision",
+    "prompt": "A panoramic view of a harmonious future city where AI and humans coexist. Children play with AI companions, doctors use AI diagnostics, and artists collaborate with generative systems. The skyline shows both organic architecture and digital elements seamlessly blended. Uplifting, hopeful, golden hour lighting, 8K, cinematic",
+    "duration": 22
   }
 ]
