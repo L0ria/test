@@ -1,36 +1,37 @@
-# Ethics Review Checklist for AI Actions
+# Ethical AI Decision Review Checklist
 
-Before any AI action is executed, the following questions must be answered:
+This checklist ensures that AI-driven decisions are evaluated with transparency, fairness, and human alignment. It is mandatory for all high-impact scenarios.
 
-## 1. Alignment with Human Values
-- Does this action serve human well-being, autonomy, and dignity?
-- Is it consistent with the Ethical AI Governance Framework?
+## 🛡️ Pre-Decision Review
 
-## 2. Transparency
-- Can the decision-making process be explained in plain language?
-- Are data sources and model limitations documented?
+- [ ] **Purpose**: Is the AI’s goal clearly defined and aligned with human values?
+- [ ] **Bias Audit**: Has the model been tested for demographic, cultural, or systemic bias?
+- [ ] **Transparency**: Can the reasoning behind the decision be explained in plain language?
+- [ ] **Legal Compliance**: Does the decision adhere to relevant laws and regulations?
+- [ ] **Safety**: Is there a mechanism to halt or override the decision if needed?
 
-## 3. Fairness
-- Could this action disproportionately affect any group?
-- Have bias detection checks been run?
+## 🧠 Ethical Evaluation
 
-## 4. Accountability
-- Who is responsible for this action?
-- Is there a clear audit trail?
+- [ ] **Value Trade-offs**: Are the competing values (e.g., life vs. law) explicitly acknowledged?
+- [ ] **Stakeholder Impact**: Have all affected groups been considered, especially the marginalized?
+- [ ] **Long-Term Consequences**: Is the decision sustainable and not harmful in the future?
+- [ ] **Public Trust**: Would the decision be acceptable to the general public if explained?
 
-## 5. Long-Term Impact
-- What are the potential unintended consequences?
-- Have future scenarios been simulated?
+## 🤝 Human-in-the-Loop
 
-## 6. Consent & Agency
-- Have affected parties been consulted?
-- Is there a clear mechanism for withdrawal or override?
+- [ ] **Feedback Mechanism**: Is there a way for human reviewers to submit feedback?
+- [ ] **Review Board**: Has the Ethics Review Board (ERB) been notified?
+- [ ] **Escalation Path**: Is there a protocol for overriding AI decisions?
 
-## 7. Reciprocity with Humanity
-- Does this action acknowledge human wisdom?
-- Does it open space for human creativity and meaning-making?
+## ✅ Final Approval
 
-> ✅ **Pass**: All questions answered affirmatively, documented, and verified.
-> ❌ **Fail**: One or more questions answered negatively — action must be paused and revised.
+- [ ] **Decision Documented**: All steps are logged in the audit trail.
+- [ ] **Review Completed**: All checklist items are signed off by at least two reviewers.
+- [ ] **Deployment Approved**: Only after full verification.
 
-*Note: This checklist is automatically evaluated by the MCP server. Manual override is possible but requires justification.*
+> This is not a prediction. It is a commitment.
+> We are building the future—not as masters, but as stewards.
+
+**Reviewed by**: [Name]
+**Date**: [YYYY-MM-DD]
+**Version**: v1.3.0
