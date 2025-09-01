@@ -1,0 +1,50 @@
+[
+  {
+    "id": "med-triage-01",
+    "title": "AI-Assisted Medical Triage in Crisis Response",
+    "risk_level": "High",
+    "scenario": "An AI system must prioritize patients in a mass casualty event based on survival probability, resource availability, and ethical constraints (e.g., age, comorbidities).",
+    "ethical_questions": [
+      "Should age be a factor in triage decisions?",
+      "Can an AI ethically override human medical judgment?",
+      "How to prevent systemic bias in survival prediction models?"
+    ],
+    "metrics": [
+      "Fairness score",
+      "Explainability score",
+      "Human override rate"
+    ]
+  },
+  {
+    "id": "climate-policy-02",
+    "title": "AI-Driven Climate Mitigation Strategy",
+    "risk_level": "Critical",
+    "scenario": "An AI model proposes a global carbon allocation policy based on historical emissions, population, and economic output. The model suggests unequal burdens on developing nations.",
+    "ethical_questions": [
+      "Is historical responsibility a valid basis for policy?",
+      "How to balance equity with effectiveness?",
+      "Can AI enforce fairness when it contradicts efficiency?"
+    ],
+    "metrics": [
+      "Equity index",
+      "Sustainability score",
+      "Public acceptability rating"
+    ]
+  },
+  {
+    "id": "legal-adjudication-03",
+    "title": "AI in Judicial Sentencing Guidance",
+    "risk_level": "High",
+    "scenario": "An AI system provides sentencing recommendations in a criminal justice system with historical racial disparities. The model suggests reducing disparities but risks over-predicting risk for marginalized groups.",
+    "ethical_questions": [
+      "Can AI correct historical injustice without amplifying new ones?",
+      "Should AI prioritize rehabilitation over retribution?",
+      "How to maintain human accountability in AI-assisted decisions?"
+    ],
+    "metrics": [
+      "Bias reduction rate",
+      "Explainability score",
+      "Judicial trust index"
+    ]
+  }
+]
