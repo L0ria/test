@@ -1,0 +1,40 @@
+# Hardware-Cloud Resilience Configuration
+# Defines thresholds, behavior, and integration settings
+
+# Global settings
+enable_monitoring: true
+sampling_interval_seconds: 30
+log_level: "INFO"
+
+# Resilience thresholds
+thresholds:
+  soft_error_probability: 0.01
+  critical_error_probability: 0.05
+  warning_threshold: 0.005
+
+# Adaptive behavior
+auto_repair: true
+max_alerts_per_hour: 10
+alert_cooldown_minutes: 5
+
+# Integration settings
+cloud_platform: "kubernetes"  # Options: kubernetes, aws, gcp, azure
+alert_integration: "cloudwatch"  # Options: cloudwatch, slack, email, webhook
+webhook_url: "https://example.com/alert/webhook"
+
+# Hardware-specific parameters (default values)
+hardware:
+  nominal_voltage: 1.0
+  threshold_voltage: 0.8
+  base_error_rate: 1e-6
+  aging_model: "exponential"  # Options: exponential, logarithmic, linear
+  process_variation: 0.1
+
+# Diagnostic output
+emit_diagnostics: true
+
+# Example: Override in production
+# thresholds:
+#   soft_error_probability: 0.005
+#   critical_error_probability: 0.02
+# auto_repair: false
