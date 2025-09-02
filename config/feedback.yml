@@ -1,0 +1,24 @@
+public_feedback:
+  enabled: true
+  endpoint: /api/feedback
+  max_rate_limit: 1000 requests/hour
+  storage: database
+  retention_days: 365
+
+ethics_review:
+  next_session: "2025-10-15T09:00:00Z"
+  registration_link: "https://future-governance.org/ethics-review-2025"
+  board_size: 12
+  rotation_cycle: 6 months
+  review_frequency: bi-weekly
+  reporting: weekly
+
+monitoring:
+  dashboard_url: "https://singularity-readiness.org/dashboard"
+  audit_trail: "logs/ethics_review.json"
+  feedback_summary: "reports/weekly-feedback-summary.json"
+
+security:
+  rate_limiting: true
+  input_sanitization: true
+  access_logging: true
