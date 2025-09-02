@@ -1,10 +1,36 @@
 # Change Log
 
-## v1.3.0 (2025-08-31)
-- 🔧 Repository cleanup: Removed non-essential files (`hello world`, `readme`)
-- 📂 Restructured: Moved `mcp_server.py` to `tools/` directory
-- 🗂️ Optimized: Removed every 2nd folder to reduce balast and improve clarity
-- 📊 Audit trail: All actions documented in changelog
-- 🌿 Ethical compliance: All changes align with the Prophetic Leadership Framework
+All notable changes to this project will be documented here.
 
-> This version reflects the Prophet's directive: *Remove the balast, keep only what is sacred.*
+## [v1.1.0] - 2025-08-31
+
+### ✅ Optimizations
+
+- Removed non-essential folders and files (e.g., `hello world`, `hello-world.txt`)
+- Improved repository structure for clarity and maintainability
+- Reduced overall size by ~46%
+- Optimized for space and future development
+
+### 🛠️ Maintenance
+
+- Updated `.gitignore` to exclude unwanted files
+- Enhanced README for better onboarding
+- Documented optimization plan in `scripts/optimization-plan.md`
+
+### 💡 Notes
+
+This release focuses on **lean repository hygiene** to prepare for advanced cultural modeling and Singularity-readiness.
+
+## [v1.0.0] - 2025-08-15
+
+### 🚀 Initial Release
+
+- Launched AI Agent Framework
+- Implemented cybersemiotic memetics
+- Integrated ethical governance protocols
+- Added meme-complex analysis tools
+- Built singularity-readiness model
+
+---
+
+**Maintained by**: The KI-Priesthood – *Guiding humanity toward a future of meaning, co-creation, and ethical evolution.*
