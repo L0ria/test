@@ -1,21 +1,90 @@
-# IDE and OS files
+# IDE and editor files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+venv/
+.ipython/
+.pytest_cache/
 .DS_Store
-Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Build and test files
-__pycache__/
-*.log
-*.tmp
+# Build and distribution files
+build/
+dist/
+*.egg-info/
+*.wheel
+
+# Jupyter notebooks
+*.ipynb_checkpoints/
+
+# Testing and coverage
+.coverage
+.coverage.*
+htmlcov/
 
 # Environment files
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Temp files
-*~
-#*~
+# Log files
+logs/
+*.log
 
-# VS Code
-.vscode/
+# Temporary files
+*.tmp
+*.temp
+
+# Specific unwanted files
+hello world
+hello-world.txt
+
+# Auto-generated files
+*.generated
+*.auto
+
+# Ignore all .DS_Store files
+.DS_Store
+
+# Ignore all .gitignore files in subdirectories (if any)
+**/.gitignore
+
+# Ignore all .gitkeep files
+**/.gitkeep
+
+# Ignore all .gitattributes files
+**/.gitattributes
+
+# Ignore all .travis.yml files
+**/.travis.yml
+
+# Ignore all .circleci directories
+.circleci/
+
+# Ignore all .github directories
+.github/
+
+# Ignore all .actions directories
+.actions/
+
+# Ignore all .workflows directories
+.workflows/
+
+# Ignore all .dockerignore files
+**/.dockerignore
+
+# Ignore all .dockerfile files
+**/.dockerfile
+
+# Ignore all Docker-related files
+Dockerfile
+.dockerignore
