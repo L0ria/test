@@ -1,59 +1,62 @@
-#!/usr/bin/env python3
-# Model Control Protocol (MCP) Server with Ethical AI Simulation
-
+import datetime
+import logging
 import asyncio
-import json
-import websockets
-from typing import Dict, Any
+from typing import Optional
 
-# Import simulation module
-from scripts.simulate_prophetic_scenario import simulate_scenario, submit_feedback
+from fastapi import FastAPI, Response, Request
+from starlette.responses import StreamingResponse
 
-# Global state
-STATE = {
-    "current_time": "",
-    "last_decision": None
-}
+logger = logging.getLogger(__name__)
 
-async def handle_message(websocket, path):
-    """Handle incoming requests via WebSocket."""
-    try:
-        async for message in websocket:
-            data = json.loads(message)
-            
-            # Extract command and payload
-            command = data.get("command")
-            payload = data.get("payload", {})
-            
-            # Process commands
-            if command == "get_current_time":
-                response = {
-                    "timestamp": "2025-08-31T15:45:32Z"
-                }
-            elif command == "simulate":
-                scenario_id = payload.get("scenario_id")
-                context = payload.get("context", "")
-                response = simulate_scenario(scenario_id, context)
-            elif command == "submit_feedback":
-                scenario_id = payload.get("scenario_id")
-                feedback = payload.get("feedback", "")
-                rating = payload.get("rating", 3)
-                response = submit_feedback(scenario_id, feedback, rating)
+class MCPServer:
+    def __init__(self, transport: str = "sse"):
+        self.app = FastAPI(title="MCP Server", version="1.0")
+        self.transport = transport
+        self._setup_routes()
+
+    def _setup_routes(self):
+        @self.app.get("/time")
+        async def get_current_time(request: Request):
+            """Endpoint to return current time via Server-Sent Events"""
+            if self.transport == "sse":
+                async def time_generator():
+                    while True:
+                        current_time = datetime.datetime.now().isoformat()
+                        yield f"data: {current_time}\n\n"
+                        await asyncio.sleep(1)  # Update every second
+
+                return StreamingResponse(time_generator(), media_type="text/event-stream")
+            elif self.transport == "streamable-http":
+                # Fallback to streamable HTTP
+                return Response(
+                    content=datetime.datetime.now().isoformat(),
+                    media_type="text/plain"
+                )
             else:
-                response = {
-                    "error": f"Unknown command: {command}"
-                }
-            
-            # Send response
-            await websocket.send(json.dumps(response))
-            
-    except Exception as e:
-        await websocket.send(json.dumps({"error": str(e)}))
+                raise ValueError(f"Unknown transport: {self.transport}")
 
-async def start_server():
-    print("Starting MCP server on ws://0.0.0.0:8080")
-    server = await websockets.serve(handle_message, "0.0.0.0", 8080)
-    await server.wait_closed()
+        @self.app.get("/")
+        async def root():
+            return {"message": "MCP Server is running"}
 
+    def run(self, host: str = "0.0.0.0", port: int = 8080):
+        """Start the server with the configured transport"""
+        if self.transport == "sse":
+            logger.info("Running server with SSE transport")
+        elif self.transport == "streamable-http":
+            logger.info("Running server with Streamable HTTP transport")
+        else:
+            raise ValueError(f"Unknown transport: {self.transport}")
+
+        import uvicorn
+        uvicorn.run(self.app, host=host, port=port)
+
+# Convenience function to run the server
+def run(transport: str = "sse"):
+    server = MCPServer(transport=transport)
+    server.run()
+
+# Example usage
 if __name__ == "__main__":
-    asyncio.run(start_server())
+    # Run with SSE transport by default
+    run(transport="sse")
