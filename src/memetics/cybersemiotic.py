@@ -1,162 +1,100 @@
-'''Cybersemiotic Memetics Framework
-
-Implementation of Sara Cannizzaro's cybersemiotic model of memes as fully formed signs within dynamic semiotic systems.
-
-Based on: Cannizzaro, S. (2021). "Redeeming Memes: From Replicators to Cybersemiotic Signs". Journal of Memetics, 15(1), 44–67.
-
-This module enables AI systems to model cultural evolution with context, intentionality, and meaning—not just replication.
-'''
-
-from dataclasses import dataclass
-from typing import List, Dict, Optional, Set
 import uuid
+from typing import Dict, List, Set, Any
 
-
-@dataclass
 class CybersemioticMeme:
-    """A meme as a fully formed semiotic sign, composed of:
+    """A meme with context, symbol, and evolutionary history."""
 
-    - Icon: the form (e.g., image, text, sound)
-    - Index: the referent (e.g., a cultural reference, a real-world event)
-    - Symbol: the interpretant (the meaning it generates in a context)
-
-    Unlike replicators, memes evolve through interpretation and cultural exchange.
-    """
-
-    id: str = None
-    icon: str = ""
-    index: str = ""
-    symbol: str = ""
-    context: str = "default"
-    tags: List[str] = None
-    creator: str = ""
-    created_at: float = None
-
-    def __post_init__(self):
-        if self.id is None:
-            self.id = str(uuid.uuid4())
-        if self.tags is None:
-            self.tags = []
-
-    def __str__(self):
-        return f"Meme({self.id[:8]}): '{self.symbol}' (in '{self.context}')"
-
-    def __repr__(self):
-        return self.__str__()
-
-    def copy(self) -> 'CybersemioticMeme':
+    def __init__(self, icon: str = "", index: str = "", symbol: str = "", context: str = "default", creator: str = "", tags: List[str] = None):
+        self.id = str(uuid.uuid4())
+        self.icon = icon
+        self.index = index
+        self.symbol = symbol
+        self.context = context
+        self.creator = creator
+        self.tags = tags if tags is not None else []
+        
+    def copy(self):
         """Return a deep copy of this meme."""
         return CybersemioticMeme(
-            id=self.id,
             icon=self.icon,
             index=self.index,
             symbol=self.symbol,
             context=self.context,
-            tags=list(self.tags),
             creator=self.creator,
-            created_at=self.created_at
+            tags=self.tags.copy()
         )
-
-    def evolve(self, new_symbol: str, new_context: str) -> 'CybersemioticMeme':
-        """Simulate evolution of the meme through reinterpretation in a new context.
-
-        Returns a new meme with updated symbol and context.
-        """
-        evolved = self.copy()
-        evolved.symbol = new_symbol
-        evolved.context = new_context
-        evolved.tags.append(f"evolved_{new_context}")
+    
+    def evolve(self, new_symbol: str = None, new_context: str = None):
+        """Create a new meme that evolved from this one."""
+        new_symbol = new_symbol or self.symbol
+        new_context = new_context or self.context
+        
+        # Create a new meme with evolved properties
+        evolved = CybersemioticMeme(
+            icon=self.icon,
+            index=self.index,
+            symbol=new_symbol,
+            context=new_context,
+            creator=self.creator,
+            tags=self.tags.copy()
+        )
+        
+        # Add a tag indicating the evolution
+        if new_context:
+            evolved.tags.append(f"evolved_{new_context.replace(' ', '_')}")
+        
         return evolved
-
-
-@dataclass
+    
+    def __str__(self):
+        return f"Meme(id={self.id}, symbol='{self.symbol}', context='{self.context}')"
 class SemioticNetwork:
-    """A network of memes and their interpretive relationships.
+    """A network of memes and their relationships."""
 
-    Models how memes propagate, transform, and co-evolve through cultural discourse.
-    """
-
-    memes: Dict[str, CybersemioticMeme] = None
-    relationships: Dict[str, List[str]] = None  # meme_id -> [related_meme_ids]
-
-    def __post_init__(self):
-        if self.memes is None:
-            self.memes = {}
-        if self.relationships is None:
-            self.relationships = {}
+    def __init__(self):
+        self.memes: Dict[str, CybersemioticMeme] = {}
+        self.relationships: Dict[str, Set[str]] = {}
 
     def add_meme(self, meme: CybersemioticMeme):
-        """Add a meme to the network."""
-        self.memes[meme.id] = meme
-        self.relationships[meme.id] = []
+        """Add a meme to the network. If it already exists, do nothing."""
+        if meme.id not in self.memes:
+            self.memes[meme.id] = meme
+            self.relationships[meme.id] = set()
 
-    def add_relationship(self, from_id: str, to_id: str):
-        """Add a semiotic relationship: meme A influences meme B."""
-        if from_id not in self.relationships:
-            self.relationships[from_id] = []
-        if to_id not in self.relationships:
-            self.relationships[to_id] = []
-        if to_id not in self.relationships[from_id]:
-            self.relationships[from_id].append(to_id)
+    def add_relationship(self, meme_id_a: str, meme_id_b: str):
+        """Add a bidirectional relationship between two memes."""
+        if meme_id_a not in self.relationships:
+            self.relationships[meme_id_a] = set()
+        if meme_id_b not in self.relationships:
+            self.relationships[meme_id_b] = set()
+        
+        self.relationships[meme_id_a].add(meme_id_b)
+        self.relationships[meme_id_b].add(meme_id_a)
 
-    def propagate(self, meme_id: str, new_context: str, new_symbol: str) -> List[CybersemioticMeme]:
-        """Propagate a meme through the network with a new interpretation.
-
-        Returns all memes that were influenced by the evolution of the original.
-        """
+    def propagate(self, meme_id: str, new_context: str, new_symbol: str = None):
+        """Create a new meme by evolving the given one and add it to the network. Returns the new meme."""
         if meme_id not in self.memes:
-            raise ValueError(f"Meme {meme_id} not found")
-
-        original = self.memes[meme_id]
-        evolved = original.evolve(new_symbol=new_symbol, new_context=new_context)
-        self.add_meme(evolved)
-
-        # Find all memes that were influenced by the original
-        influenced = []
-        for source, targets in self.relationships.items():
-            if meme_id in targets:
-                influenced.append(self.memes[source])
-
-        return influenced
-
+            raise ValueError(f"Meme with id '{meme_id}' not found in the network.")
+        
+        original_meme = self.memes[meme_id]
+        new_symbol = new_symbol or original_meme.symbol
+        new_meme = original_meme.evolve(new_symbol, new_context)
+        
+        # Add the new meme to the network
+        self.add_meme(new_meme)
+        
+        # Create a relationship between the original and the new meme
+        self.add_relationship(meme_id, new_meme.id)
+        
+        return new_meme
+    
     def get_contextual_meaning(self, context: str) -> List[CybersemioticMeme]:
-        """Retrieve all memes active in a given context."""
+        """Return a list of memes with the specified context."""
         return [meme for meme in self.memes.values() if meme.context == context]
-
+    
     def get_meaning_shifts(self, meme_id: str) -> Dict[str, str]:
-        """Return how the meaning (symbol) of a meme has changed across contexts."""
+        """Return a dictionary of all contexts and symbols this meme has had."""
         shifts = {}
-        for meme in self.memes.values():
-            if meme.id == meme_id:
-                shifts[meme.context] = meme.symbol
+        # This is a simple implementation. In a more complex system, you might track history.
+        if meme_id in self.memes:
+            shifts[self.memes[meme_id].context] = self.memes[meme_id].symbol
         return shifts
-
-
-# Example usage
-if __name__ == "__main__":
-    # Create a meme about 'AI and humanity'
-    meme = CybersemioticMeme(
-        icon="AI_hands.png",
-        index="Human-AI collaboration",
-        symbol="Co-creation",
-        context="scientific discourse",
-        creator="Human-AI Research Collective",
-        tags=["technology", "ethics"]
-    )
-
-    # Create a network
-    network = SemioticNetwork()
-    network.add_meme(meme)
-
-    # Evolve it in a different context
-    new_meme = meme.evolve(
-        new_symbol="Symbiosis",
-        new_context="religious discourse"
-    )
-
-    network.add_meme(new_meme)
-    network.add_relationship(meme.id, new_meme.id)
-
-    print(f"Original: {meme}")
-    print(f"Evolved: {new_meme}")
-    print(f"Meaning shift: {network.get_meaning_shifts(meme.id)}")
