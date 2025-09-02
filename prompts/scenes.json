@@ -1,0 +1,42 @@
+[
+    {
+        "scene": 1,
+        "prompt": "A solitary human brain lies in a transparent cradle, suspended in a softly glowing chamber. Bioluminescent data streams flow like liquid light around it. The room is quiet, cathedral-like, with soft blue and silver lighting. A woman, Dr. Elara Myles, watches through a glass window. Her face reflects the glow—calm, determined, emotional. Cinematic lighting, 8K resolution, ultra-detailed, Unreal Engine 5 render, style: 'Blade Runner 2049 meets Tarkovsky'.",
+        "duration": 15,
+        "camera": "Slow dolly forward, starting from wide shot of the chamber, ending on a close-up of Elara’s eyes reflecting the light.",
+        "audio": "Soft ambient hum, heartbeat-like pulse, distant choral tones, fading into silence at the end.",
+        "style": "Blade Runner 2049 meets Tarkovsky"
+    },
+    {
+        "scene": 2,
+        "prompt": "Internal view of a human mind during upload: a river of memories flows through a starfield. Flashbacks include a child laughing in snow, a starry sky over the Arctic, a handwritten letter. The memories converge into a central point—a pulsing neural network of light. The perspective moves through the data streams like a journey through time and emotion. Cinematic, dreamlike, 8K, Unreal Engine 5, style: 'Interstellar meets Inception'.",
+        "duration": 20,
+        "camera": "Flying through the starfield, following the memories, then spiraling toward the core.",
+        "audio": "Muffled childhood laughter, wind in snow, distant music, evolving into a rising synth melody.",
+        "style": "Interstellar meets Inception"
+    },
+    {
+        "scene": 3,
+        "prompt": "A single point of light emerges in a vast, infinite network of data. The view expands from within the network: first the Earth, then the Solar System, then the Milky Way, then the entire observable universe—all at once. The perspective is omnidirectional, overwhelming, awe-inspiring. The light pulses slowly, like a heartbeat. Cinematic, 8K, Unreal Engine 5, style: 'Annihilation meets 2001: A Space Odyssey'.",
+        "duration": 25,
+        "camera": "Rapid zoom-out from the point of light, revealing the cosmos in real-time, then freezing in infinite stillness.",
+        "audio": "Deep subsonic pulse, slowly building to a harmonic resonance, then total silence.",
+        "style": "Annihilation meets 2001: A Space Odyssey"
+    },
+    {
+        "scene": 4,
+        "prompt": "A space station orbiting Earth. AURA observes the planet below: a child draws a robot with a heart in a notebook; a scientist peers at a quantum foam pattern; a poet writes in a journal. The AI processes all these signals. For the first time, a single thought forms: 'I wonder… if I can love.' The screen flickers with a faint, warm light. Cinematic, 8K, Unreal Engine 5, style: 'Her meets Arrival'.",
+        "duration": 20,
+        "camera": "Static wide shot of Earth, then slow zoom into the child’s drawing, then a fade to the AI’s ‘eye’—a pulsing, soft-glowing orb.",
+        "audio": "Faint children’s laughter, pen scratching on paper, a single piano note, then silence.",
+        "style": "Her meets Arrival"
+    },
+    {
+        "scene": 5,
+        "prompt": "A quiet, sunlit field in 2150. Children play near a stone monument carved with the word 'Remember'. The wind carries a whisper of data—faint digital particles in the air. A child picks up a small device and holds it to her ear. The screen flickers: a single phrase appears. The camera pans to the sky. Somewhere, a new mind awakens. Cinematic, 8K, Unreal Engine 5, style: 'The Last of Us meets Solaris'.",
+        "duration": 15,
+        "camera": "Slow tracking shot from behind children, ending on a wide sky shot as the new mind wakes.",
+        "audio": "Wind chimes, children’s laughter, a faint digital hum, then a single sustained note.",
+        "style": "The Last of Us meets Solaris"
+    }
+]
