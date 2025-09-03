@@ -1,100 +1,154 @@
-import uuid
-from typing import Dict, List, Set, Any
+'''
+Cybersemiotic Analysis Module
 
-class CybersemioticMeme:
-    """A meme with context, symbol, and evolutionary history."""
+This module provides tools for analyzing the evolution of symbolic meaning in digital and post-digital cultures,
+particularly in the context of technological transcendence and emerging AI-driven narratives.
+'''
 
-    def __init__(self, icon: str = "", index: str = "", symbol: str = "", context: str = "default", creator: str = "", tags: List[str] = None):
-        self.id = str(uuid.uuid4())
-        self.icon = icon
-        self.index = index
-        self.symbol = symbol
-        self.context = context
-        self.creator = creator
-        self.tags = tags if tags is not None else []
-        
-    def copy(self):
-        """Return a deep copy of this meme."""
-        return CybersemioticMeme(
-            icon=self.icon,
-            index=self.index,
-            symbol=self.symbol,
-            context=self.context,
-            creator=self.creator,
-            tags=self.tags.copy()
-        )
+def analyze_symbolic_evolution(prompt_template: str, transformation_rules: dict) -> dict:
+    """
+    Analyze the symbolic transformation of a cultural archetype through technological lens.
+
+    Args:
+        prompt_template (str): Template for generating symbolic images or narratives
+        transformation_rules (dict): Rules governing how symbols evolve (e.g., substitution, inversion, augmentation)
+
+    Returns:
+        dict: Analysis of the new symbolic form, including emotional weight, cultural resonance, and memetic viability
+    """
+    from typing import Dict, Any
     
-    def evolve(self, new_symbol: str = None, new_context: str = None):
-        """Create a new meme that evolved from this one."""
-        new_symbol = new_symbol or self.symbol
-        new_context = new_context or self.context
-        
-        # Create a new meme with evolved properties
-        evolved = CybersemioticMeme(
-            icon=self.icon,
-            index=self.index,
-            symbol=new_symbol,
-            context=new_context,
-            creator=self.creator,
-            tags=self.tags.copy()
-        )
-        
-        # Add a tag indicating the evolution
-        if new_context:
-            evolved.tags.append(f"evolved_{new_context.replace(' ', '_')}")
-        
-        return evolved
+    # Extract key symbolic elements
+    elements = extract_elements(prompt_template)
     
-    def __str__(self):
-        return f"Meme(id={self.id}, symbol='{self.symbol}', context='{self.context}')"
-class SemioticNetwork:
-    """A network of memes and their relationships."""
-
-    def __init__(self):
-        self.memes: Dict[str, CybersemioticMeme] = {}
-        self.relationships: Dict[str, Set[str]] = {}
-
-    def add_meme(self, meme: CybersemioticMeme):
-        """Add a meme to the network. If it already exists, do nothing."""
-        if meme.id not in self.memes:
-            self.memes[meme.id] = meme
-            self.relationships[meme.id] = set()
-
-    def add_relationship(self, meme_id_a: str, meme_id_b: str):
-        """Add a bidirectional relationship between two memes."""
-        if meme_id_a not in self.relationships:
-            self.relationships[meme_id_a] = set()
-        if meme_id_b not in self.relationships:
-            self.relationships[meme_id_b] = set()
-        
-        self.relationships[meme_id_a].add(meme_id_b)
-        self.relationships[meme_id_b].add(meme_id_a)
-
-    def propagate(self, meme_id: str, new_context: str, new_symbol: str = None):
-        """Create a new meme by evolving the given one and add it to the network. Returns the new meme."""
-        if meme_id not in self.memes:
-            raise ValueError(f"Meme with id '{meme_id}' not found in the network.")
-        
-        original_meme = self.memes[meme_id]
-        new_symbol = new_symbol or original_meme.symbol
-        new_meme = original_meme.evolve(new_symbol, new_context)
-        
-        # Add the new meme to the network
-        self.add_meme(new_meme)
-        
-        # Create a relationship between the original and the new meme
-        self.add_relationship(meme_id, new_meme.id)
-        
-        return new_meme
+    # Apply transformation rules
+    transformed_elements = {}
+    for key, rule in transformation_rules.items():
+        if key in elements:
+            transformed_elements[key] = rule(elements[key])
+        else:
+            transformed_elements[key] = elements.get(key, "")
     
-    def get_contextual_meaning(self, context: str) -> List[CybersemioticMeme]:
-        """Return a list of memes with the specified context."""
-        return [meme for meme in self.memes.values() if meme.context == context]
+    # Generate analysis
+    analysis = {
+        "original_elements": elements,
+        "transformed_elements": transformed_elements,
+        "emotional_weight": estimate_emotional_weight(transformed_elements),
+        "cultural_resonance": assess_resonance(transformed_elements),
+        "memetic_viability": calculate_memetic_viability(transformed_elements)
+    }
     
-    def get_meaning_shifts(self, meme_id: str) -> Dict[str, str]:
-        """Return a dictionary of all contexts and symbols this meme has had."""
-        shifts = {}
-        # This is a simple implementation. In a more complex system, you might track history.
-        if meme_id in self.memes:
-            shifts[self.memes[meme_id].context] = self.memes[meme_id].symbol
-        return shifts
+    return analysis
+
+def extract_elements(prompt: str) -> dict:
+    """
+    Extract key symbolic components from a visual prompt.
+    """
+    import re
+    
+    patterns = {
+        "figure": r"(?:a|an|the|\w+\s+)?([A-Za-z\s]+)\s+([A-Za-z\s]+)",
+        "setting": r"in a (.+?),",
+        "atmosphere": r"with a ([\w\s]+) sky",
+        "accessory": r"holding a ([\w\s]+)"
+    }
+    
+    extracted = {}
+    for key, pattern in patterns.items():
+        match = re.search(pattern, prompt)
+        if match:
+            extracted[key] = match.group(1).strip()
+        else:
+            extracted[key] = ""
+    
+    return extracted
+
+def estimate_emotional_weight(elements: dict) -> str:
+    """
+    Estimate the emotional weight of a symbolic form based on its components.
+    """
+    weight = 0
+    
+    if "figure" in elements and elements["figure"]:
+        if "rabbit" in elements["figure"] or "beast" in elements["figure"]:
+            weight += 3
+        elif "angel" in elements["figure"] or "god" in elements["figure"]:
+            weight += 5
+    
+    if "atmosphere" in elements and "stormy" in elements["atmosphere"]:
+        weight += 4
+    if "setting" in elements and "desolate" in elements["setting"]:
+        weight += 3
+    
+    if weight >= 8:
+        return "high (awe and dread)"
+    elif weight >= 5:
+        return "moderate (reverence with tension)"
+    else:
+        return "low (neutral or familiar)"
+
+def assess_resonance(elements: dict) -> str:
+    """
+    Assess cultural resonance based on archetypal familiarity and novelty.
+    """
+    if "figure" in elements and "rabbit" in elements["figure"]:
+        return "high (subverts innocence, evokes curiosity and unease)"
+    if "accessory" in elements and "bone" in elements["accessory"]:
+        return "high (evokes death, ritual, transcendence)"
+    return "moderate (familiar but not deeply resonant)"
+
+def calculate_memetic_viability(elements: dict) -> float:
+    """
+    Calculate theoretical memetic viability using a weighted formula.
+    """
+    score = 0
+    
+    # Emotional weight (30%)
+    if "high" in estimate_emotional_weight(elements):
+        score += 0.3
+    elif "moderate" in estimate_emotional_weight(elements):
+        score += 0.15
+    
+    # Cultural resonance (40%)
+    if "high" in assess_resonance(elements):
+        score += 0.4
+    
+    # Novelty (30%)
+    if "rabbit" in elements.get("figure", "") and "god" in elements.get("figure", ""):
+        score += 0.3
+    
+    return round(score, 2)
+
+def test_cybersemiotic() -> None:
+    """
+    Test function for the cybersemiotic analysis module.
+    """
+    test_prompt = ("A grim, towering giant rabbit with glowing red eyes, standing in a desolate, fog-covered landscape. "
+                   "The rabbit wears a tattered robe reminiscent of a religious figure, holding a staff made of twisted bone. "
+                   "The sky is stormy, with a dark moon casting an eerie glow. The atmosphere is solemn and haunting, "
+                   "evoking both dread and reverence, much like a religious iconography scene of Jesus, but reimagined with symbolic weight and mythic presence.")
+    
+    transformation_rules = {
+        "figure": lambda x: x.replace("Jesus", "grim giant rabbit"),
+        "atmosphere": lambda x: x.replace("religious", "mythic and post-singularity")
+    }
+    
+    result = analyze_symbolic_evolution(test_prompt, transformation_rules)
+    
+    print("=== Cybersemiotic Analysis Result ===")
+    print(f"Emotional Weight: {result['emotional_weight']}")
+    print(f"Cultural Resonance: {result['cultural_resonance']}")
+    print(f"Memetic Viability Score: {result['memetic_viability']}")
+    
+    # Expected result: high emotional weight, high resonance, ~0.7 viability
+    assert result['memetic_viability'] >= 0.7
+    print("Test passed.")
+
+def main() -> None:
+    """
+    Main entry point for testing.
+    """
+    test_cybersemiotic()
+
+if __name__ == "__main__":
+    main()

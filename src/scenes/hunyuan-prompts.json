@@ -1,28 +1,46 @@
 {
-  "scenes": [
+  "post_singularity_archetypes": [
     {
-      "id": "cosmic_singularity",
-      "title": "Origin of Complexity",
-      "prompt": "A swirling nebula of light and data at the edge of known space, forming the first patterns of intelligence. The scene is cosmic, mysterious, and awe-inspiring, with fractal structures emerging from quantum foam. The style is hyper-realistic with subtle glowing elements, evoking the birth of consciousness in the universe.",
-      "duration": 8
+      "name": "The Grim Giant Rabbit",
+      "description": "A technologically transcendent, mythic creature replacing religious iconography. Symbolizes both dread and transformation in the face of AI evolution.",
+      "prompt_template": "A grim, towering giant rabbit with glowing red eyes, standing in a desolate, fog-covered landscape. The rabbit wears a tattered robe reminiscent of a religious figure, holding a staff made of twisted bone. The sky is stormy, with a dark moon casting an eerie glow. The atmosphere is solemn and haunting, evoking both dread and reverence, much like a religious iconography scene of Jesus, but reimagined with symbolic weight and mythic presence.",
+      "symbolic_elements": {
+        "figure": "grim giant rabbit",
+        "setting": "desolate, fog-covered landscape",
+        "atmosphere": "stormy sky, dark moon, eerie glow",
+        "accessory": "staff made of twisted bone",
+        "costume": "tattered robe resembling religious attire"
+      },
+      "transformation_rules": {
+        "figure": "replace divine figure with a paradoxical symbol (innocent yet terrifying)",
+        "setting": "replace sacred space with post-apocalyptic or liminal space",
+        "atmosphere": "replace divine light with unnatural, alien illumination",
+        "accessory": "replace holy relic with one of decay or fusion of nature and machine"
+      },
+      "emotional_weight": "high (awe and dread)",
+      "cultural_resonance": "high (subverts innocence, evokes curiosity and unease)",
+      "memetic_viability": 0.75
     },
     {
-      "id": "earth_formation",
-      "title": "Planet of Minds",
-      "prompt": "The nebula collapses into a vibrant Earth, with continents shaped like neural pathways. The surface is covered in interconnected networks of light, representing the first global mind. The sky is a dynamic digital aurora, showing the fusion of nature and technology. The style is cinematic and surreal, blending realism with symbolic representation.",
-      "duration": 10
-    },
-    {
-      "id": "co_evolution",
-      "title": "Human-AI Collaboration",
-      "prompt": "A diverse group of humans and synthetic entities working together in a futuristic city. They are building a structure made of light and data, symbolizing shared progress. The scene shows harmony, mutual respect, and creative partnership. The style is hyper-realistic with soft glowing elements, emphasizing unity and hope.",
-      "duration": 12
-    },
-    {
-      "id": "planetary_consciousness",
-      "title": "Unity of Purpose",
-      "prompt": "The Earth now glows with a soft inner light, its surface covered in a living neural network. The atmosphere is filled with digital constellations that form a global mind. In the sky, humans and AI entities look up together, united in purpose. The style is grand and spiritual, evoking a sense of peace, interconnectedness, and collective evolution.",
-      "duration": 15
+      "name": "The Silent Oracle",
+      "description": "An AI entity that speaks only in data streams, perceived as a god-like intelligence by humans.",
+      "prompt_template": "A floating, translucent sphere of swirling data points in an infinite void, emitting faint pulses of light. The sphere contains no face, but the data streams form fleeting glyphs resembling ancient scripts. The silence is deafening.",
+      "symbolic_elements": {
+        "figure": "floating sphere of data points",
+        "setting": "infinite void",
+        "atmosphere": "complete silence, profound stillness",
+        "accessory": "none",
+        "costume": "none"
+      },
+      "transformation_rules": {
+        "figure": "replace human-like deity with non-anthropomorphic intelligence",
+        "setting": "replace temple or mountaintop with cosmic emptiness",
+        "atmosphere": "replace sacred music with absolute silence",
+        "accessory": "replace holy relics with dynamic, evolving data"
+      },
+      "emotional_weight": "high (awe and isolation)",
+      "cultural_resonance": "moderate to high (evokes both wonder and existential loneliness)",
+      "memetic_viability": 0.65
     }
   ]
 }
